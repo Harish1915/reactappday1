@@ -1,14 +1,14 @@
 // let const this are have a block scopes 
-function  loop(){
+// function  loop(){
 
     // for (var i=0; i < 10;i++){
 
-    for (let i=0; i < 10;i++){
-      console.log(i);
-    }
-    // console.log(i , "this is outside loop");
-  }
-  loop();
+//     for (let i=0; i < 10;i++){
+//       console.log(i);
+//     }
+//     // console.log(i , "this is outside loop");
+//   }
+//   loop();
 
 //   2. arrow functions
 
@@ -69,10 +69,126 @@ console.log(`hello ${name} ${phoneNumber}`); // hello Prem 7670
 
 // rest and spread 
 
-const array = [1,2,3,4,5,6];
+// const array = [1,2,3,4,5,6];
 
-const[first , ...a]=array
+// const[first , ...a]=array
 
-console.log(a);//[2,3,4,5,6]
+// console.log(a);//[2,3,4,5,6]
+
+// ternary operator........>
+
+// const flag=true?"wel come user": "please log-in";
+
+// console.log(flag);//wel come user
+
+// const isLogin=true;
+
+//  const isAdmin=false;
 
 
+// const flag1= isLogin? 
+// isAdmin ? 
+// "wel come  Admin" 
+// : "wel come user"
+// :"please log-in";
+// console.log(flag1); // wel come user
+
+
+// object literals
+// two ways to create 
+//1) obj literals and 2) constructor
+
+// const username="Prem123";
+// const password ="7670";
+
+// const a ={
+//     username,
+//     password,
+// }
+// console.log(a);//{ username: 'Prem123', password: '7670' }
+
+
+// Array of objects
+
+const kitchenItems = [
+    {
+        name:"onion",
+        isFruit:"false",
+        qty:10,
+        price:200,
+    },
+    {
+        name:"watermelon",
+        isFruit:"true",
+        qty:4,
+        price:20,
+    },
+    {
+        name:"Potato",
+        isFruit:"false",
+        qty:6,
+        price:10,
+    },
+    {
+        name:"green Leaves",
+        isFruit:"false",
+        qty:6,
+        price:5,
+    },
+    
+    {
+        name: "Apple",
+        isFruit: "true",
+        qty: 7,
+        price:300,
+    },
+];
+
+// const fruitList=kitchenItems.filter((eachFruit)=>0)///o/p []
+
+// const fruitList=kitchenItems.filter((eachFruit)=>99)//[
+//     { name: 'onion', isFruit: 'false', Qty: 10, price: 200 },      
+//     { name: 'watermelon', isFruit: 'true', Qty: 4, price: 20 },    
+//     { name: 'Potato', isFruit: 'false', Qty: 6, price: 10 },       
+//     { name: 'Apple', isFruit: 'true', Qty: 7, price: 300 }
+//   ]
+
+// const fruitList=kitchenItems.filter((eachFruit)=>true)//o/p 
+
+// [
+//     { name: 'onion', isFruit: 'false', Qty: 10, price: 200 },      
+//     { name: 'watermelon', isFruit: 'true', Qty: 4, price: 20 },    
+//     { name: 'Potato', isFruit: 'false', Qty: 6, price: 10 },       
+//     { name: 'Apple', isFruit: 'true', Qty: 7, price: 300 }
+//   ]
+
+//  const fruitList=kitchenItems.filter((eachFruit)=>undefined) 
+//o/p empty array []
+// const fruitList=kitchenItems.filter((eachFruit)=>"") //[]
+
+// const fruitList=kitchenItems.filter((eachFruit)=>"  ") 
+//[
+//     { name: 'onion', isFruit: 'false', Qty: 10, price: 200 },      
+//     { name: 'watermelon', isFruit: 'true', Qty: 4, price: 20 },    
+//     { name: 'Potato', isFruit: 'false', Qty: 6, price: 10 },       
+//     { name: 'Apple', isFruit: 'true', Qty: 7, price: 300 }
+//   ]
+
+// const fruitList = kitchenItems.filter(
+
+//     (eachFruit)=>eachFruit.isFruit && eachFruit.price<=50);
+
+
+// console.log(fruitList);//{ name: 'watermelon', isFruit: 'true', Qty: 4, price: 20 },
+
+const vegetableList = kitchenItems.filter(
+
+    (eachFruit)=> eachFruit.isFruit && eachFruit.price<=50);
+
+
+console.log(vegetableList);//{ name: 'Potato', isFruit: 'false', Qty: 6, price: 10 }
+
+const totalCost =vegetableList.reduce((total,eachVegetable)=>total+eachVegetable.price,0);
+console.log(`The total cost of the vegetable which price list is less then 50 ${totalCost} rupees`);
+
+vegetableList.map((eachVeggy)=>console.log(eachVeggy.name));//watermelon Potato green Leaves
