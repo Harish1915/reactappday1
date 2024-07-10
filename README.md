@@ -1,38 +1,65 @@
-README:-
+React apps build by using components
 
- This file acts like note pad for the application's ,here we will mention project description , how to run the project coding standards used in the project
+components : is the independent reusable bits of code which is responsible for user  INTERFACES 
+
+Every component must start with the capital
+
+component can be as small as button or as large as screen
+
+components are two types(compo can b created by 2 ways)
+
+1) class based components
+2) functional based components
+
+note:  while creating new component , it's always  suggestible to use functional base components
+
+React 2013 - 2018: 1.class based components (dynamic websites); functional based components (static websites)
+
+2018(Hooks) : functional based (dynamic websites+static websites);
+
+components will be nested to from the UI
+
+every component return the markup(html)
+
+every file can contain as many components
+
+APP.js is the root component in the react application
+
+in React app we can have 3 extensions for the components 
+
+1) .js (which re presents the java script files)
+2) .jsx(this represents react jsx file)
+3) .tsx (this re presents the type script files)
+
+exports:
+1) Named export :
+add export key at the beginning of the component
+import can be using curly based
+wec an take multiple names exports in a single file
+
+for name imports  we can use other name of components by using the "as" key word
+
+2) Default export:
+
+add export default keyword at the end of the component
+
+imports can be done directly 
+
+we can only take single export default in a file
+
+we can use any name , but it should start from capital letter
 
 
-PACKAGE.JSON:-
 
+add export default keyword at the end ogf the component
 
- This file  consists of project script's and dependencies from here we can check the versions of the dependencies and scripts to run and test the applications, 
- this file is Mandatory
+DRY : Don't Repeat Your Self
 
- PACKAGE-LOCK.JSON:-
+always try to re use the code instead of duplicating
+
+JSX: Javascript and XML - Language syntax followed by the react where js functions can return the markup language
+
+Browser does't understand JSX,
+Babel is a tool which transpile JSX code to the browser uderstanfdable code {js code},
 
  
- This file holds the versioning information of the dependencies used , this helps us to run the app, 
- consistently  across different systems 
-
- npm instal:- This command installs the dependencies of the project { it create the node modules and packages -lock.json}
-
- .gitignore:- 
-
- This file blocks the "files or folders " not to track in the git 
-
- src:- code working directory .
- we will ue this folder all the time to write all "UI COMPONENTS"
-
- MAINLY FOCUS ON 
- 1) INDEX.JS 
- 2) APP.JS
-
- node modules:- 
-
- it contains the all the dependency codes required for our project , it occupies majority of react app size ( we will prevent  node modules changes for tracking in git )
-
- React is only used  for designing  the single page Applications 
- [only content will be changed inside the html file]
-
- App.js ---> Root component of React Applications

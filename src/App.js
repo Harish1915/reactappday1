@@ -1,17 +1,32 @@
-// function App(){
 
-//   return  <h1>HELLO WORLD</h1>
+import CustomButton from "./components/button/button";
+// import Heading1, { Heading2 } from "./components/headings/heading";
+import MinHeading1 ,{ Heading2 as SecondHeading2 ,
 
-// }
+} from "./components/headings/heading";
 
-// const App =()=><h1>HELLO WORLD</h1>;
+import ListParent from "./components/lists/listParent";
+
+import UnorderedList from "./components/lists/unorderedList";
 
 
-const App=()=>(
+const App = ()=>{
+
+  return( 
+
   <div>
-    <h1>My Name is Raja hi </h1>
-  </div>
-);
+    <CustomButton/> <br></br><br></br>
+    <CustomButton/><br></br><br></br>
+    <CustomButton/><br></br><br></br>
+    <CustomButton/><br></br><br></br>
+    <CustomButton/><br></br><br></br>
+    <MinHeading1/>
+    <SecondHeading2/>
+    <ListParent/>
+    <UnorderedList/>
 
+  </div>
+
+  );
+};
 export default App;
-  
