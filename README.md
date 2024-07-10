@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+React apps build by using components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+components : is the independent reusable bits of code which is responsible for user  INTERFACES 
 
-## Available Scripts
+Every component must start with the capital
 
-In the project directory, you can run:
+component can be as small as button or as large as screen
 
-### `npm start`
+components are two types(compo can b created by 2 ways)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1) class based components
+2) functional based components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+note:  while creating new component , it's always  suggestible to use functional base components
 
-### `npm test`
+React 2013 - 2018: 1.class based components (dynamic websites); functional based components (static websites)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2018(Hooks) : functional based (dynamic websites+static websites);
 
-### `npm run build`
+components will be nested to from the UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+every component return the markup(html)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+every file can contain as many components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+APP.js is the root component in the react application
 
-### `npm run eject`
+in React app we can have 3 extensions for the components 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1) .js (which re presents the java script files)
+2) .jsx(this represents react jsx file)
+3) .tsx (this re presents the type script files)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+exports:
+1) Named export :
+add export key at the beginning of the component
+import can be using curly based
+wec an take multiple names exports in a single file
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+for name imports  we can use other name of components by using the "as" key word
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2) Default export:
 
-## Learn More
+add export default keyword at the end of the component
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+imports can be done directly 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+we can only take single export default in a file
 
-### Code Splitting
+we can use any name , but it should start from capital letter
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+add export default keyword at the end ogf the component
 
-### Making a Progressive Web App
+DRY : Don't Repeat Your Self
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+always try to re use the code instead of duplicating
 
-### Advanced Configuration
+JSX: Javascript and XML - Language syntax followed by the react where js functions can return the markup language
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Browser does't understand JSX,
+ Babel is a tool which transpile JSX code to the browser uderstanfdable code {js code}
