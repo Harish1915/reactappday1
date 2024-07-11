@@ -1,12 +1,22 @@
-import Image1 from "../image/image1";
+import Heading1 from "../headings/heading";
+import { Heading2 } from "../headings/heading";
+import ImageComp from "../image/imagecmp";
 
-const ProfileComponents=()=>{
+const ProfileComponents = () => {
 
-    return
-    (
-    <div><Image1></Image1></div>
+    return (
+    
+    <div>
+        <Heading1/>
+        <Heading2/>
+        <ImageComp/>
+       
 
+        
+    </div>
 
-    ); 
+    );
+    
 };
+
 export default ProfileComponents;
