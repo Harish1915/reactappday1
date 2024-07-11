@@ -9,13 +9,23 @@ import ListParent from "./components/lists/listParent";
 
 import UnorderedList from "./components/lists/unorderedList";
 
+import ProfileComponents from "./components/profile/profileComponent";
+
+import ImageComp from "./components/image/imagecmp";
+
+import Table from "./components/table/table";
+
+
+
+
+
 
 const App = ()=>{
 
   return( 
 
   <div>
-    <CustomButton/> <br></br><br></br>
+    {/* <CustomButton/> <br></br><br></br>
     <CustomButton/><br></br><br></br>
     <CustomButton/><br></br><br></br>
     <CustomButton/><br></br><br></br>
@@ -23,7 +33,10 @@ const App = ()=>{
     <MinHeading1/>
     <SecondHeading2/>
     <ListParent/>
-    <UnorderedList/>
+    <UnorderedList/> */}
+
+    {/* <ProfileComponents/>  */}
+    <Table/> 
 
   </div>
 

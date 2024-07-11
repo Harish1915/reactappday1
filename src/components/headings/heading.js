@@ -10,7 +10,7 @@ export default Heading1;
 export const Heading2 = ()=>
     {
     
-        return <h2>Hello </h2>
+        return <h2>This Is My Bag </h2>
     }
 
     
