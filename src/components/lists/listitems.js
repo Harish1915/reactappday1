@@ -1,11 +1,16 @@
+
+import { fruits } from "./fruits";
+
 const ListItems = ()=>{
+
     return (
-    <div>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>watermelon</li>
-        <li>Mango</li>
-        </div>
+    <>
+      {fruits.map((a,b)=>(
+        <li key={a.id}>
+        {a.cost}</li>
+        
+        ))}
+        </>
     );
 };
 export default ListItems;

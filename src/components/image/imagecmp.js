@@ -1,13 +1,19 @@
 
-const ImageComp=()=>{
+const ImageComp=(prop)=>{
+
+    const{source,altText,width,height,}=prop
     
     return(
 
-     <img src = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="bag"
+     <img src = {source} alt={altText}
 
-         width={100}
+         width={width}
 
-         height={100}/>
+         height={height}
+         
+         />
+
+        
 
     );
 };
