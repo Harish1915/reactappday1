@@ -1,16 +1,17 @@
 
-const Heading1 = ()=>
+const Heading1 = (prop)=>
 {
-
-    return <h1>Hi </h1>
+const{text}=prop
+    return <h1>{text}</h1>
+    
 }
 
 export default Heading1;
 
-export const Heading2 = ()=>
+export const Heading2 = (prop)=>
     {
-    
-        return <h2>This Is My Bag </h2>
+    const {description}=prop
+        return <h2> {description} </h2>
     }
 
     

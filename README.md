@@ -63,3 +63,77 @@ Browser does't understand JSX,
 Babel is a tool which transpile JSX code to the browser uderstanfdable code {js code},
 
  
+
+
+ JSX:
+ JSX: Javascript and XML- Language syntax followed by the react where js functions can return the markup language
+
+
+Rules of jsx:
+
+1. every component must return  single parent element {this must be shared container like div,section,ol or React.Fragments}
+
+2.  Class must be replaced with the className;
+
+3. every js code inside the return must be enclosed with the curly  braces
+
+4. every attribute must be in camelCase
+
+React.Fragments:
+
+It act like a shared empty parent container with out including of extra shared nodes in the dom
+
+There are 2 ways to include the Fragments
+
+1. <></> => this is the empty fragment
+
+2. <React.Fragment></React.Fragment>
+
+note :efficient rendering will be possible using fragments
+
+List Rendering in react:
+ whenever if we want to display the list items(array),we will use the map method
+
+ map method will iterate the UI parts
+
+ ex: const fruits = ["apple", "banana" , "mango "]
+
+ fruits.map(eachFruit=>console.log(eachFruit))
+
+
+ note : React is completely declarative syntax, we don't need to use dom methods 
+ we will specify directly what we want 
+
+ KEY PROP: whenever we are using map method, we must always include key prop
+
+ key prop : will make repeated UI elements to render efficiently , By using this updates and deletions were must faster
+
+
+ what is attribute ?
+
+ additional information given to the element
+
+ ex: <img src=> src is attribute(in react we are calling props)
+
+ <ImageComponent alt=""  hight=""  path=""...>
+
+ Render Props in React  :  
+
+ props is an object , which helps us to communicate or share data from parent component to the child component
+
+ props are the additional information passed to the components
+
+<ImageComponent alt=""  hight=""  path=""...> alt  height path this are called props
+ Pros are  immutable (we cannot change over the time )
+
+ Props allows us to render the content dynamically , we can control the layout of the UI components
+
+ we can take more the one prop for the components 
+
+ <ButtonComponent text="login"  width="100px" >
+  <ButtonComponent text="signup"  width="200px" >
+
+
+  2 ways of props:
+  1. general prop
+  2. childern prop
