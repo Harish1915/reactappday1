@@ -1,0 +1,12 @@
+.button{
+
+    background-color: blueviolet;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+
+}

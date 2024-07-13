@@ -1,5 +1,5 @@
 
-import CustomButton from "./components/button/button";
+import CustomButton, { CustomButtonA } from "./components/button/button";
 // import Heading1, { Heading2 } from "./components/headings/heading";
 import MinHeading1 ,{ Heading2 as SecondHeading2 ,
 
@@ -21,87 +21,63 @@ import Heading1 from "./components/headings/heading";
 import { bagData } from "./components/lists/fruits";
 
 import { Heading2 } from "./components/headings/heading";
+import Greeting from "./components/greeting/greeting";
+import Card from "./components/card/card";
+
+// import CustomButton from "./components/button/button";
 
 
+// const Names=["Raj","SAMSON","Ram","Prem"]
+    
+// const App = ()=>{
+
+// return( 
+// <div>
+
+// {
+//  Names.map((eachName)=>{
+//   return(
+
+//     <Greeting>
+//   {/* {eachName}
+//   <h3>This I s My Mobile Number Call Me 123456789</h3> */}{/*first method}
 
 
+// <h1>GOOd Morning {eachName}</h1>  {/*this is 2nd method*/}
+// {/* <h2>This Is harish kumar</h2>
+// <h3> this is my number 123456</h3> */}
+// {/* <Card>{eachName}</Card> */}
 
+// <Card name={eachName}/>
+
+// </Greeting>
+
+//   )
   
-    {/* <CustomButton/> <br></br><br></br>
-    <CustomButton/><br></br><br></br>
-    <CustomButton/><br></br><br></br>
-    <CustomButton/><br></br><br></br>
-    <CustomButton/><br></br><br></br>
-    <MinHeading1/>
-    <SecondHeading2/>
-    <ListParent/>
-    <UnorderedList/> */}
+//  })
 
-    {/* <ProfileComponents/> 
-    <Table/> 
+// }
 
-    <ListItems/> */}
-    {/* <ListParent/> */}
 
-    {/* <CustomButton text="login" bgColor="red" width={100}/><br></br><br></br>
+//   </div>
 
-    <CustomButton text="submit" bgColor="blue"  width={80}/><br></br><br></br>
+//   );
+// };
+// export default App;
 
-    <CustomButton text="login" bgColor="green"  width={70}/><br></br><br></br>
+const App=()=>{
 
-    <CustomButton  bgColor="pink"  width={70}/><br></br><br></br> */}
-
-{/* <CustomButton properties ={{text:"login" ,bgColor:"red"}}/><br></br><br></br>
-
-<CustomButton properties ={{text:"submit",bgColor:"blue" }}/><br></br><br></br>
-
-<CustomButton properties ={{text:"login", bgColor:"green" }}/><br></br><br></br>
-
-<CustomButton properties ={{bgColor:"pink"}}/><br></br><br></br> */}
-
-    
-const App = ()=>{
-
-return( 
-
-  <div>
-
-    {bagData.map((a)=>{
-
-        return(
-          <div key={a.name}>
-
-<Heading1 text={a.name}  
-
-    />
-
-<ImageComp
-
-source={a.source}
-    
-    altText="bag"
-
-    width={100}
  
-    height={100}
 
-    />
-    
+  return (
 
-    <Heading2 description={a.description}/>
-
-    <hr/>
+    <div>
+<CustomButton text="button"/>
 
     </div>
+  )
 
-        );
-      })
-    }
-
-
-
-  </div>
-
-  );
+  
 };
+
 export default App;
