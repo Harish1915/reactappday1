@@ -1,5 +1,5 @@
 
-
+import "./button.css"
 // const CustomButton= (prop)=>{
 //     return(
 // <button style={{backgroundColor:prop.bgColor}}>{prop.text} </button>
@@ -14,11 +14,25 @@
 //     );
 // };
 
-const CustomButton= (prop)=>{
+// const CustomButton= (prop)=>{
 
-    const{text="Harish kumar",bgColor,width=100}=prop.properties
+//     const{text="Harish kumar",bgColor,width=100}=prop.properties
+//     return(
+// <button style={{backgroundColor:bgColor,width:width}}>{text} </button>
+//     );
+// };
+// export default CustomButton;
+
+export const CustomButton= (prop)=>{
+
+    const{text}=prop
     return(
-<button style={{backgroundColor:bgColor,width:width}}>{text} </button>
-    );
+
+        <center>
+            <button style={{backgroundColor:"red"}} >  {text} </button> 
+            {/* // inline styling */}
+        {/* <button className="button"> hi</button> */}
+        </center>
+    )
 };
 export default CustomButton;
