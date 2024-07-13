@@ -1,12 +1,42 @@
+
+body{
+    background-color: rgb(172, 174, 154);
+}
+
 .button{
 
-    background-color: blueviolet;
-    font-size: medium;
+    background-color: rgb(209, 196, 15);
+    font-size:medium;
     cursor: pointer;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    
+    /* margin-top: 100px; */
+    padding: 5px;
+   
+}
 
+
+
+.div{
+     /* display: flex;  */
+    border: 2px solid rgb(145, 10, 116);
+    width: 18rem;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: darkgoldenrod;
+    margin: 10px;
+    box-shadow: 10px 4px 4px 4px rgb(4, 73, 29);
+    
+   
+}
+.div:hover{
+   
+   box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.code{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    margin: 10px;
 }

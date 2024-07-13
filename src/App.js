@@ -64,6 +64,8 @@ import Card from "./components/card/card";
 //   );
 // };
 // export default App;
+import { div } from "./components/div/div";
+
 
 const App=()=>{
 
@@ -71,8 +73,26 @@ const App=()=>{
 
   return (
 
-    <div>
-<CustomButton text="button"/>
+    <div className="code">
+     {
+       div.map((eachdata)=>{
+        return(
+
+   <CustomButton  source={eachdata.source}
+        text={eachdata.name}
+         text1={eachdata.text}
+          text2={eachdata.button} 
+           bg={eachdata.bg}
+             color={eachdata.color}
+/>
+
+
+        )
+       })
+        
+       
+     }
+
 
     </div>
   )

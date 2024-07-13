@@ -25,13 +25,18 @@ import "./button.css"
 
 export const CustomButton= (prop)=>{
 
-    const{text}=prop
+    const{source,text,text1,text2 ,bg,color}=prop
     return(
 
         <center>
-            <button style={{backgroundColor:"red"}} >  {text} </button> 
-            {/* // inline styling */}
-        {/* <button className="button"> hi</button> */}
+        <div className="div" style={ {backgroundColor:bg}} > 
+            <h1> {text}</h1>
+            <img src={source}/>
+           <b> <p style={{color:"blue"}}>{text1} </p></b>
+            <button className="button" style={{backgroundColor:color}}> {text2}</button>
+           
+
+        </div>
         </center>
     )
 };
