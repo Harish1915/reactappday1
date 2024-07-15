@@ -28,52 +28,58 @@ import { fakeData } from "./components/fakedata/fakedata";
 import NavBar from "./components/navbar/navbar";
 import BasicExample from "./components/bootstrap/progressbar";
 
-import React from "react";
+// import React from "react";
+import CustomList from "./components/lists/customlist/customlist";
 
+const students=["Prem","Samson","SPM"];
+const vegetables=["1kaya","Bkaya","Skaya"];
+
+const Item=["CHICKEN-BIRYANI"];
+const Ingredients=["Rice","oil","Pan","Bowl","Spoon"];
+const Instructions=["Switch on the Stove","Take A Cooker"]
 
 
 const App=()=>{
-
-
   return(
-    <>
+  <div>
 
-<NavBar/>
-
-<div className="flex" >
-
-{
-  
- fakeData.map((data)=>{
-  return(
-  //  <React.Fragment key={data.id}>
-    <Card1  
-     name={data.name}
-     text={data.text}
-     ps={data.ps}
-     ds={data.ds}
-     ct={data.ct}
-    source={data.source}
-    rt={data.rt}
-    color={data.color}
-    bg={data.bg}    /> 
-
-    // <React.Fragment/>
-  )
-
- })
-
-}
-     </div>
-
-
-    </>
-    
+    <Card1/>
 
 
 
-    
+    </div>
+
   )
 };
-export default App;
+export default App;  
+
+
+
+
+
+
+
+
+
+
+
+{/* <Heading1 title={Item}/>
+<Heading1 title={"ingredients to cook the " + Item}/>
+<CustomList list={Ingredients}/>
+<Heading1 title={"Required  Steps to Cook The  " + Item}/>
+<CustomList list={Instructions}/>
+<Heading1 title={"Fruits"}/>
+
+   <CustomList list={["apple","banana"]} />
+
+<Heading1 title={"Students"}/>
+
+    <CustomList list={students}/>
+
+<Heading1 title={"Vegetables"}/>
+
+      <CustomList list={vegetables}/> */}
+
+
+
 

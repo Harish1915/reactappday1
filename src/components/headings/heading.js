@@ -1,8 +1,8 @@
 
 const Heading1 = (prop)=>
 {
-const{text}=prop
-    return <h1>{text}</h1>
+const{title}=prop
+    return <h1>{title}</h1>
     
 }
 
