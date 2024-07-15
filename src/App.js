@@ -22,82 +22,58 @@ import { bagData } from "./components/lists/fruits";
 
 import { Heading2 } from "./components/headings/heading";
 import Greeting from "./components/greeting/greeting";
-import Card from "./components/card/card";
-
-// import CustomButton from "./components/button/button";
-
-
-// const Names=["Raj","SAMSON","Ram","Prem"]
-    
-// const App = ()=>{
-
-// return( 
-// <div>
-
-// {
-//  Names.map((eachName)=>{
-//   return(
-
-//     <Greeting>
-//   {/* {eachName}
-//   <h3>This I s My Mobile Number Call Me 123456789</h3> */}{/*first method}
-
-
-// <h1>GOOd Morning {eachName}</h1>  {/*this is 2nd method*/}
-// {/* <h2>This Is harish kumar</h2>
-// <h3> this is my number 123456</h3> */}
-// {/* <Card>{eachName}</Card> */}
-
-// <Card name={eachName}/>
-
-// </Greeting>
-
-//   )
-  
-//  })
-
-// }
-
-
-//   </div>
-
-//   );
-// };
-// export default App;
+import Card, { Card1 } from "./components/card/card";
 import { div } from "./components/div/div";
+import { fakeData } from "./components/fakedata/fakedata";
+import NavBar from "./components/navbar/navbar";
+import BasicExample from "./components/bootstrap/progressbar";
+
+import React from "react";
+
 
 
 const App=()=>{
 
- 
 
-  return (
+  return(
+    <>
 
-    <div className="code">
-     {
-       div.map((eachdata)=>{
-        return(
+<NavBar/>
 
-   <CustomButton  source={eachdata.source}
-        text={eachdata.name}
-         text1={eachdata.text}
-          text2={eachdata.button} 
-           bg={eachdata.bg}
-             color={eachdata.color}
-/>
+<div className="flex" >
 
+{
+  
+ fakeData.map((data)=>{
+  return(
+  //  <React.Fragment key={data.id}>
+    <Card1  
+     name={data.name}
+     text={data.text}
+     ps={data.ps}
+     ds={data.ds}
+     ct={data.ct}
+    source={data.source}
+    rt={data.rt}
+    color={data.color}
+    bg={data.bg}    /> 
 
-        )
-       })
-        
-       
-     }
-
-
-    </div>
+    // <React.Fragment/>
   )
 
-  
-};
+ })
 
+}
+     </div>
+
+
+    </>
+    
+
+
+
+    
+  )
+};
 export default App;
+
