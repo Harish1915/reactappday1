@@ -204,5 +204,5 @@ REACT Functional(dynamic layer) Layer:
 
 Render() is a predefine method which is mandatory method for inserting the UI elements in dom
 
-Inheritance:(a quary properties send methods from parent to childer ki aquary )
+Inheritance:(a query properties send methods from parent to children ki a query)
  in JavaScript is a mechanism that allows objects to inherit properties and methods from other objects. This promotes code reusability and helps in creating a hierarchy of objects.
