@@ -47,6 +47,7 @@ const App=()=>{
 
 {
   
+  
  fakeData.map((data,index)=>{
   return(
  

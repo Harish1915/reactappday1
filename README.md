@@ -1,22 +1,29 @@
 
 
-External Css:
+React State: React is on object which holds the information or data of a particular component 
+React state is a mutable
+React State will used in both class and functional component
 
-External modules : 
-we will create .module.css file,we will add the style and import in targeted component and use via variable
+React State creation in class based component:
+
+There are Two Ways 
+1. Using constructor
+2. object way of  state creation 
+
+example : initial state data -- subscribe , user trigger click event ,  final state data -- subscribed
+
+example : isLogin - false , user trigger click event , isLogin-true
+example : todo - ["wake up at 8am"] , user added new todo by click event , ["wake up at 8am","break fast at 9am"]
+example : employDetails - {name:"ram",salary:1000},user wants to increase salary,click event ,{name:"ram",salary:2000}
 
 
-External Css frameworks styling;
+Important : we cannot change the state directly bu simply assigning , reason: react does't allow UI updates by this Process
 
+note: we must use setState method  to mutate state
 
-1. Bootstrap and React BOOtstrap
-2. Tailwind css
-3. Charkha UI
-4. Ant design
-5. Material UI...
+setState method is used to mutate the state in a class based components
 
-"3 Way's to Instal the BootStrap"
-1. CDN link
-2. Bootstrap code in the code and relative path
-3. USING npm
+setState will accept two args
 
+1. object 
+2. callback function 
