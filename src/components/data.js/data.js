@@ -1,3 +1,5 @@
+import "./data.css"
+
 import React from 'react';
 
 // Sample data
@@ -80,14 +82,69 @@ const recipes = [
       "Lunch"
     ]
   },
+  ,
+    {
+      "id": 14,
+      "name": "Chapli Kebabs",
+      "ingredients": [
+        "Ground beef",
+        "Onions, finely chopped",
+        "Tomatoes, finely chopped",
+        "Green chilies, chopped",
+        "Coriander leaves, chopped",
+        "Pomegranate seeds",
+        "Ginger-garlic paste",
+        "Cumin powder",
+        "Coriander powder",
+        "Red chili powder",
+        "Egg",
+        "Cooking oil",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "In a large bowl, mix ground beef, chopped onions, tomatoes, green chilies, coriander leaves, and pomegranate seeds.",
+        "Add ginger-garlic paste, cumin powder, coriander powder, red chili powder, and salt. Mix well.",
+        "Add an egg to bind the mixture and form into round flat kebabs.",
+        "Heat cooking oil in a pan and shallow fry the kebabs until browned on both sides.",
+        "Serve hot with naan or mint chutney."
+      ],
+      "prepTimeMinutes": 30,
+      "cookTimeMinutes": 20,
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Pakistani",
+      "caloriesPerServing": 320,
+      "tags": [
+        "Kebabs",
+        "Beef",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "userId": 152,
+      "image": "https://cdn.dummyjson.com/recipe-images/14.webp",
+      "rating": 4.7,
+      "reviewCount": 98,
+      "mealType": [
+        "Lunch",
+        "Dinner",
+        "Snacks"
+      ]
+    },
 ];
 
 const CookIng = () => {
+
+  
   return (
-    <div >
-      {recipes.map((recipe) => (
-        <div key={recipe.id} className="recipe-card">
-          <img src={recipe.image} alt={recipe.name} className="recipe-image" width={150} height={150}/>
+
+ 
+    <div className="card2" >
+      {
+      
+      recipes.map((recipe) => (
+        <div key={recipe.id}   className="flex">
+          <img src={recipe.image} alt={recipe.name}  width={150} height={150}/>
           <h2>{recipe.name}</h2>
           <p>Cuisine: {recipe.cuisine}</p>
           <p>Difficulty: {recipe.difficulty}</p>
@@ -108,16 +165,16 @@ const CookIng = () => {
               <li key={index}>{instruction}</li>
             ))}
           </ol>
-          <div className="tags">
+          <div>
             {recipe.tags.map((tag, index) => (
-              <span key={index} className="tag">
+              <span key={index} >
                 {tag}
               </span>
             ))}
           </div>
-          <div className="meal-types">
+          <div>
             {recipe.mealType.map((meal, index) => (
-              <span key={index} className="meal-type">
+              <span key={index}>
                 {meal}
               </span>
             ))}

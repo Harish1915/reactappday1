@@ -1,4 +1,5 @@
 import "./card.css"
+
 import { div } from "../div/div";
 import BasicExample from "../bootstrap/progressbar";
 import NavBar from "../navbar/navbar";
@@ -13,7 +14,7 @@ export const Card1=(prop)=>{
 
     return(
 
-        <div className="card1">
+        <div >
 
             <CookIng/>
 
