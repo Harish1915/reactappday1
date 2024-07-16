@@ -31,6 +31,8 @@ import BasicExample from "./components/bootstrap/progressbar";
 // import React from "react";
 import CustomList from "./components/lists/customlist/customlist";
 import ToggleComponent from "./components/card/card";
+import ConditionalRendering from "./components/conditionalrender/condition";
+import ClassButton from "./components/class-components/clsbutton";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -44,7 +46,7 @@ const App=()=>{
   return(
   <div>
 
-    <Card1/>
+    <ClassButton/>
 
     
 
