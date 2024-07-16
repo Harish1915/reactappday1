@@ -31,22 +31,25 @@ import BasicExample from "./components/bootstrap/progressbar";
 import React from "react";
 
 
-
+// navbar card.js , basicexample ,card.css , fake data
 const App=()=>{
 
 
   return(
-    <>
 
+
+    <>
 <NavBar/>
 
 <div className="flex" >
 
+
+
 {
   
- fakeData.map((data)=>{
+ fakeData.map((data,index)=>{
   return(
-  //  <React.Fragment key={data.id}>
+ 
     <Card1  
      name={data.name}
      text={data.text}
@@ -56,9 +59,9 @@ const App=()=>{
     source={data.source}
     rt={data.rt}
     color={data.color}
-    bg={data.bg}    /> 
+    bg={data.bg}  key={index}  /> 
 
-    // <React.Fragment/>
+    
   )
 
  })
