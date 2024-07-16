@@ -15,7 +15,7 @@
     box-shadow: 10px 4px 4px 4px rgb(4, 73, 29);
     
 }
-.button2{
+/* .button2{
      background-color: rgb(209, 196, 15);
     font-size:medium;
     cursor: pointer;
@@ -25,7 +25,8 @@
     /* margin-top: 100px; */
     
    
-}
+ */
+
 .flex{
     display: flex;
     flex-wrap: wrap;

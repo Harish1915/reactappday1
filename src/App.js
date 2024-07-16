@@ -30,6 +30,7 @@ import BasicExample from "./components/bootstrap/progressbar";
 
 // import React from "react";
 import CustomList from "./components/lists/customlist/customlist";
+import ToggleComponent from "./components/card/card";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -44,6 +45,8 @@ const App=()=>{
   <div>
 
     <Card1/>
+
+    
 
 
 
