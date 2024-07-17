@@ -11,7 +11,7 @@ External Css frameworks styling;
 
 1. Bootstrap and React BOOtstrap
 2. Tailwind css
-3. Chakra UI
+3. Cha kra UI
 4. Ant design
 5. Material UI...
 
