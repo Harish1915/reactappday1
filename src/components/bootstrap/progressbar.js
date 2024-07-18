@@ -1,9 +1,9 @@
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
-function BasicExample(prop) {
+function CustomProgressBar(prop) {
   const{scale}=prop
   return <ProgressBar now={scale} />;
 }
 
-export default BasicExample;
+export default CustomProgressBar;
 
