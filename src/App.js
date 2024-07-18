@@ -33,6 +33,12 @@ import CustomList from "./components/lists/customlist/customlist";
 import ToggleComponent from "./components/card/card";
 import ConditionalRendering from "./components/conditionalrender/condition";
 import ClassButton from "./components/class-components/clsbutton";
+import SubscribeComponent from "./components/class-components/subscribe-button";
+import TodoComponent from "./components/class-components/todo";
+import SquareBox from "./components/class-components/square";
+import Box from "./components/class-components/squareclrchange";
+import Counter from "./components/class-components/counter";
+import SquareBox1 from "./components/class-components/squareclrchange";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -46,11 +52,7 @@ const App=()=>{
   return(
   <div>
 
-    <ClassButton/>
-
-    
-
-
+<SquareBox1/>
 
     </div>
 
