@@ -1,0 +1,35 @@
+.card {
+    background-color: #dc2222;
+    border: 1px solid #bf0dc2;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    margin: 80px auto ;
+    text-align: center;
+    box-shadow: 4px 8px 8px rgba(58, 222, 13, 0.1);
+  }
+  
+  .card h1 {
+    font-size: 2em;
+    margin: 0 0 16px;
+  }
+  
+  .card button {
+    margin: 4px;
+    padding: 8px 16px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #15c8df;
+    color: rgb(207, 14, 14);
+  }
+  
+  .card button:hover {
+    background-color: #9ab335;
+  }
+  
+  .card button:active {
+    background-color: #23d513;
+  }
+  

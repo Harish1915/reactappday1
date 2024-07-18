@@ -1,19 +1,21 @@
 
 
+
 .card1{
     border: 2px solid rgb(229, 211, 10);
     width: 36rem ;
     text-decoration: none;
-    
+   
     border-radius: 20px;
     padding: 40px;
     background-color: rgb(45, 195, 195);
-    margin: 5px;
+    margin: 10px;
     justify-content: center;
     align-items: center;
     box-shadow: 10px 4px 4px 4px rgb(4, 73, 29);
+    
 }
-.button2{
+/* .button2{
      background-color: rgb(209, 196, 15);
     font-size:medium;
     cursor: pointer;
@@ -23,7 +25,8 @@
     /* margin-top: 100px; */
     
    
-}
+ */
+
 .flex{
     display: flex;
     flex-wrap: wrap;
