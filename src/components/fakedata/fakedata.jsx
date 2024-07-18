@@ -109,4 +109,5 @@ export const fakeData=[{
         ct: "women's clothing",
          source:"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
          rt:36.8,
-      }]
+      }];
+      
