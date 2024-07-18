@@ -1,0 +1,26 @@
+
+.box1 {
+  display: inline-block;
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(125, 17, 234);
+  margin: 4px;
+  padding: 30px;
+}
+
+.box2 {
+  display: inline-block;
+  border: 1px solid rgb(40, 210, 21);
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(242, 180, 9);
+  margin: 4px;
+  padding: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+

@@ -34,8 +34,6 @@ import IplTeams from "./components/cls-component/iplteams";
 
 // navbar card.js , basicexample ,card.css , fake data
 const App=()=>{
-
-
   return(
 
 
@@ -74,6 +72,9 @@ const App=()=>{
 
 
     </>
+
+
+
     
 
 
@@ -81,5 +82,35 @@ const App=()=>{
     
   )
 };
-export default App;
+export default App;  
+
+
+
+
+
+
+
+
+
+
+
+{/* <Heading1 title={Item}/>
+<Heading1 title={"ingredients to cook the " + Item}/>
+<CustomList list={Ingredients}/>
+<Heading1 title={"Required  Steps to Cook The  " + Item}/>
+<CustomList list={Instructions}/>
+<Heading1 title={"Fruits"}/>
+
+   <CustomList list={["apple","banana"]} />
+
+<Heading1 title={"Students"}/>
+
+    <CustomList list={students}/>
+
+<Heading1 title={"Vegetables"}/>
+
+      <CustomList list={vegetables}/> */}
+
+
+
 
