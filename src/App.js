@@ -47,15 +47,52 @@ const Item=["CHICKEN-BIRYANI"];
 const Ingredients=["Rice","oil","Pan","Bowl","Spoon"];
 const Instructions=["Switch on the Stove","Take A Cooker"]
 
-
+// navbar card.js , basicexample ,card.css , fake data
 const App=()=>{
   return(
-  <div>
 
-<SquareBox1/>
 
-    </div>
+    <>
+<NavBar/>
 
+<div className="flex" >
+
+
+
+{
+  
+ fakeData.map((data,index)=>{
+  return(
+ 
+    <Card1  
+     name={data.name}
+     text={data.text}
+     ps={data.ps}
+     ds={data.ds}
+     ct={data.ct}
+    source={data.source}
+    rt={data.rt}
+    color={data.color}
+    bg={data.bg}  key={index}  /> 
+
+    
+  )
+
+ })
+
+}
+     </div>
+
+
+    </>
+
+
+
+    
+
+
+
+    
   )
 };
 export default App;  
