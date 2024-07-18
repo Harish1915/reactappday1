@@ -28,24 +28,8 @@ import { fakeData } from "./components/fakedata/fakedata";
 import NavBar from "./components/navbar/navbar";
 import BasicExample from "./components/bootstrap/progressbar";
 
-// import React from "react";
-import CustomList from "./components/lists/customlist/customlist";
-import ToggleComponent from "./components/card/card";
-import ConditionalRendering from "./components/conditionalrender/condition";
-import ClassButton from "./components/class-components/clsbutton";
-import SubscribeComponent from "./components/class-components/subscribe-button";
-import TodoComponent from "./components/class-components/todo";
-import SquareBox from "./components/class-components/square";
-import Box from "./components/class-components/squareclrchange";
-import Counter from "./components/class-components/counter";
-import SquareBox1 from "./components/class-components/squareclrchange";
+import React from "react";
 
-const students=["Prem","Samson","SPM"];
-const vegetables=["1kaya","Bkaya","Skaya"];
-
-const Item=["CHICKEN-BIRYANI"];
-const Ingredients=["Rice","oil","Pan","Bowl","Spoon"];
-const Instructions=["Switch on the Stove","Take A Cooker"]
 
 // navbar card.js , basicexample ,card.css , fake data
 const App=()=>{
