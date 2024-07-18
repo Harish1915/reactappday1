@@ -39,6 +39,7 @@ import SquareBox from "./components/class-components/square";
 import Box from "./components/class-components/squareclrchange";
 import Counter from "./components/class-components/counter";
 import SquareBox1 from "./components/class-components/squareclrchange";
+import IplTeams from "./components/class-components/iplteams";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -52,7 +53,7 @@ const App=()=>{
   return(
   <div>
 
-<SquareBox1/>
+<IplTeams/>
 
     </div>
 
