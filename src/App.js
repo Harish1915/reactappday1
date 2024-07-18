@@ -29,6 +29,7 @@ import NavBar from "./components/navbar/navbar";
 import BasicExample from "./components/bootstrap/progressbar";
 
 import React from "react";
+import IplTeams from "./components/cls-component/iplteams";
 
 
 // navbar card.js , basicexample ,card.css , fake data
@@ -39,7 +40,7 @@ const App=()=>{
 
 
     <>
-<NavBar/>
+{/* <NavBar/>
 
 <div className="flex" >
 
@@ -67,8 +68,9 @@ const App=()=>{
 
  })
 
-}
-     </div>
+} */}
+<IplTeams/>
+     {/* </div> */}
 
 
     </>
