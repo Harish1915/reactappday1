@@ -40,6 +40,8 @@ import Box from "./components/class-components/squareclrchange";
 import Counter from "./components/class-components/counter";
 import SquareBox1 from "./components/class-components/squareclrchange";
 import IplTeams from "./components/class-components/iplteams";
+import FetchExample from "./components/class-components/fetechExample";
+import FetchExample1 from "./components/class-components/productscalebar";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -53,7 +55,8 @@ const App=()=>{
   return(
   <div>
 
-<IplTeams/>
+<FetchExample/>
+{/* <FetchExample1/> */}
 
     </div>
 

@@ -7,3 +7,10 @@ function CustomProgressBar(prop) {
 
 export default CustomProgressBar;
 
+ export function BasicExample(prop) {
+  const{scale}=prop
+  return <ProgressBar now={scale} />;
+}
+
+// export default BasicExample;
+

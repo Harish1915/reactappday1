@@ -11,6 +11,8 @@ import CookIng from "../data.js/data";
 
 export const Card1=(prop)=>{
 
+    const{bg,rt,text,source,name,ds,color,ps,ct}=prop
+
 
     const calculatePercentage=(input)=>{
         // const base=1000
