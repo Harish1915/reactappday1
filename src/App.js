@@ -55,8 +55,8 @@ const App=()=>{
   return(
   <div>
 
-<FetchExample/>
-{/* <FetchExample1/> */}
+{/* <FetchExample/> */}
+<FetchExample1/>
 
     </div>
 

@@ -18,13 +18,16 @@ export default class FetchExample1 extends Component {
       .then((res) => res.json())
       .then((data) => this.setState({ products: data, loader: false }))
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
         this.setState({ error: true, loader: false });
       });
   };
 
   handleClick = (targetID) => {
-    const updatedProducts = this.updateProductPrice(this.state.products, targetID);
+    const updatedProducts = this.updateProductPrice(
+      this.state.products,
+      targetID
+    );
     this.setState({
       products: updatedProducts,
     });
@@ -58,12 +61,19 @@ export default class FetchExample1 extends Component {
         ) : (
           <div>
             {this.state.products.map((product) => (
-              <div key={product.id} className="card" onClick={() => this.handleClick(product.id)}>
+              <div key={product.id} className="card">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
-                <button className="price">${product.price.toFixed(2)}</button>
+                <button
+                  onClick={() => this.handleClick(product.id)}
+                  className="price"
+                >
+                  ${product.price.toFixed(2)}
+                </button>
                 <img src={product.image} alt={product.title} />
-                <CustomProgressBar scale={this.calculatePercentage(product.price)} />
+                <CustomProgressBar
+                  scale={this.calculatePercentage(product.price)}
+                />
               </div>
             ))}
           </div>
