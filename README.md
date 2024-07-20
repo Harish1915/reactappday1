@@ -1,18 +1,68 @@
 
-AXIOS : third party library for http calls, it efficient compared with fetch
+Earth: 
+Human Life Cycle :
+1. Born Stage 
+2. Survival Stage(middle age)
+3. Expiry Stage
 
-Axios will also return the promise
+
+DOM: ()
+Life Cycle Of a Class Component :
+"1. Mounting stage"  (When ever our elements and component's inserted in to the Dom we call this as Mounting stage ,(Jsx Inserted in the dom) );like Render is doing inserting (render is a pre define )
+
+4Method's:- 
+1. Render:
+
+ Render is a method which insert the Jsx inside the dom
+2.  Constructor : 
+
+It's used to  create and initial the stage and also for  a event binding 
+
+3. getDerivedStateFromProps: 
+
+This method is used to Initial the state based on the Props , This Method is a Static Method 
+
+4. ComponentDidMount:
+
+ Whenever this method is used to perform the side effects in the class based components in the Mounting
+ "This will execute only once in a life cycle"
+side effects: Http calls , dom manipulations, events listeners, timers
+
+note : above all method's are auto invoking Methods
+
+"2. Updating Stage:-" 
+
+ Whenever  Components or elements updated in side the" DOM "by the user events we call this phase as a Updating stage or phase
+
+1. Render : here it will execute to show the updated layout
+2. getDerivedStateFromProps : If the prop from parent changes based on the props we can update the state 
+ this two are common in this stage
+
+Home page to about page 
+
+"3. UnMounting Stage:-"
+ Whenever Components or Elements removed from the Dom this stage refers to Unmounting stage 
+
+ 3. ComponentDidUpdate: This method is used perform side Effects in a class component in the updating Phase
 
 
-syntax: axios.get(URL).then(res=>console.log(res));
+4. ShouldComponentUpdate:(component update avvala?):
 
-componentDiMount: It is a Method in react Mounting phase,
-which causes the side effects(async) in our react class based component
-(pure-function= for every same input it will gives the  same output )
+It will decide wether the component needs to update or restrict
 
-example of side effects are:
-1. Http calls (api call)
-2. Dom Manipulations
-3. Event Listeners
-4. Timer's (setInterval,setTimeout)
-this all are part of a browser (side effects)
+5. getSnapShotBeforeUpdate:
+
+ It will Give the snap of the component data before being updated in the DOM
+
+  componentWillUnmount():
+  
+         "this method is used to clean up the memory leaks of the component while removing"
+       
+    
+
+Order of Execution: 
+1st constructor,
+2nd getDerivedStateFromProps[(props,state)it will accept this two]
+3rd Render
+4th componentDidMount http call are running here to Render so that's 3rd render n 4th componentDidMount
+
