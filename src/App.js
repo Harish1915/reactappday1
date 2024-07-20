@@ -42,6 +42,8 @@ import SquareBox1 from "./components/class-components/squareclrchange";
 import IplTeams from "./components/class-components/iplteams";
 import FetchExample from "./components/class-components/fetechExample";
 import FetchExample1 from "./components/class-components/productscalebar";
+import FetchExample2 from "./components/class-components/fetchaync";
+import RecipeList from "./components/class-components/axiosrecips";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -55,10 +57,7 @@ const App=()=>{
   return(
   <div>
 
-<FetchExample/>
-{/* <FetchExample1/> */}
-
-    </div>
+<RecipeList/>    </div>
 
   )
 };
