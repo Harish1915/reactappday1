@@ -44,6 +44,9 @@ import FetchExample from "./components/class-components/fetechExample";
 import FetchExample1 from "./components/class-components/productscalebar";
 import FetchExample2 from "./components/class-components/fetchaync";
 import RecipeList from "./components/class-components/axiosrecips";
+import MountingComponent from "./components/class-components/mounting/mounting";
+import UpdatingComponent from "./components/class-components/updating/updating";
+import UnMounting from "./components/class-components/unmounting/unmounting";
 
 const students=["Prem","Samson","SPM"];
 const vegetables=["1kaya","Bkaya","Skaya"];
@@ -57,8 +60,8 @@ const App=()=>{
   return(
   <div>
 
-{/* <FetchExample/> */}
-<FetchExample1/>
+
+<UnMounting/>
 
     </div>
 
