@@ -1,68 +1,90 @@
 
-Earth: 
-Human Life Cycle :
-1. Born Stage 
-2. Survival Stage(middle age)
-3. Expiry Stage
+Note: Whenever Parent Component  Re-renders all the child components will gets  re-rendering even though there is no change in child component
+
+Pure Component:- Pure Component skips the unnecessary renders of the component until unless its state or prop changes
+
+Whenever we are pure component performance will  increases
+
+Pure component is provided by react itself
+
+"pure component must used in a class based component"
+
+pure component must extends from react
+
+"Pure Component contains the shouldComponentUpdated' life cycle , it ensures the changes in the state and props, if anything changes shouldComponentUpdated returns true (by default),else returns false
+
+Difference between class and functional :
+
+1. Render is used in class components only 
+2. serSate is used in class Components 
+3. this key word is only in class component
+4. inheritance(extends) apply only class components 
+5. Pure used in class components 
+6. All life cycle methods only used in class components 
+
+Drawbacks of Class Components:
+
+1. Amount of code (Boiler plate code is more )
+2. Debugging and maintains will gets difficult
+3. (code confusing) like  Code will be Spitted in to the  different lifecycle
+4. Code will be  Spitted based on the life cycles stages
+
+Stateless component: A component being used only for (UI Layer)Presentational layer 
+Stateless component: A component being used for container layer (functional)
+(class based  components  are Stateful components  )
+(Before Hooks Functional   components  are StateLess components 
+AFter Hooks functional based components are stateless components )
 
 
-DOM: ()
-Life Cycle Of a Class Component :
-"1. Mounting stage"  (When ever our elements and component's inserted in to the Dom we call this as Mounting stage ,(Jsx Inserted in the dom) );like Render is doing inserting (render is a pre define )
+HOOKS: this are simple Js functions, It lets us use the state and other react features without using the class
 
-4Method's:- 
-1. Render:
+react features -> Life cycle methods
 
- Render is a method which insert the Jsx inside the dom
-2.  Constructor : 
+Hooks were introduced as  16.8 version in react functional components in 2018
 
-It's used to  create and initial the stage and also for  a event binding 
+Beta version (early stage )
+Hooks are used in functional only
 
-3. getDerivedStateFromProps: 
-
-This method is used to Initial the state based on the Props , This Method is a Static Method 
-
-4. ComponentDidMount:
-
- Whenever this method is used to perform the side effects in the class based components in the Mounting
- "This will execute only once in a life cycle"
-side effects: Http calls , dom manipulations, events listeners, timers
-
-note : above all method's are auto invoking Methods
-
-"2. Updating Stage:-" 
-
- Whenever  Components or elements updated in side the" DOM "by the user events we call this phase as a Updating stage or phase
-
-1. Render : here it will execute to show the updated layout
-2. getDerivedStateFromProps : If the prop from parent changes based on the props we can update the state 
- this two are common in this stage
-
-Home page to about page 
-
-"3. UnMounting Stage:-"
- Whenever Components or Elements removed from the Dom this stage refers to Unmounting stage 
-
- 3. ComponentDidUpdate: This method is used perform side Effects in a class component in the updating Phase
+Rules of the Hooks':
+1. Hooks can only used in functional components , not in-class components
+2. Hooks must always call at the top of the functional components
+3. Hooks must be imported from react itself (import {useState} from "react")
+4. Hooks cannot used in condition's loops , and inside the bin-ded functions
 
 
-4. ShouldComponentUpdate:(component update avvala?):
+if(true){
+    //hooks (this is the wrong way )
+}
 
-It will decide wether the component needs to update or restrict
+["But we can write a condition inside the hooks"]
 
-5. getSnapShotBeforeUpdate:
+5. Hooks must always start with "use" Keyword
 
- It will Give the snap of the component data before being updated in the DOM
 
-  componentWillUnmount():
-  
-         "this method is used to clean up the memory leaks of the component while removing"
-       
-    
+Examples of Hooks:
+1. useState []
+2. useEffect
+3. useRef
+4. useContext
+5. useReduce 
+6. useMemo
+7. useCallback....
 
-Order of Execution: 
-1st constructor,
-2nd getDerivedStateFromProps[(props,state)it will accept this two]
-3rd Render
-4th componentDidMount http call are running here to Render so that's 3rd render n 4th componentDidMount
+we can also design the "custom" hooks(ex:useFetch,useCounter)
+custom were designed by using react inbuilt hooks 
 
+ Hooks will follow DRY("Don't Repeat Your Self" ) principle
+
+ Topics:
+ 1. Pure Components 
+ 2. Stateless and stateful components
+ 3. Difference between class and functional
+ 4. Drawbacks of class components
+ 5. Hooks introduction and rules of hooks
+
+ Tasks:
+ 1. 
+ 2. Observe the life cycle behavior when we have child components
+ 3. Document the today topics
+ 4. Hit the Api show the card's
+ 

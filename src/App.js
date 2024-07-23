@@ -47,22 +47,17 @@ import RecipeList from "./components/class-components/axiosrecips";
 import MountingComponent from "./components/class-components/mounting/mounting";
 import UpdatingComponent from "./components/class-components/updating/updating";
 import UnMounting from "./components/class-components/unmounting/unmounting";
+import UserList from "./components/jsonapi";
+import UserList1 from "./components/jsonapi";
 
-const students=["Prem","Samson","SPM"];
-const vegetables=["1kaya","Bkaya","Skaya"];
 
-const Item=["CHICKEN-BIRYANI"];
-const Ingredients=["Rice","oil","Pan","Bowl","Spoon"];
-const Instructions=["Switch on the Stove","Take A Cooker"]
 
 
 const App=()=>{
   return(
   <div>
 
-
-<UnMounting/>
-
+<UserList1/>
     </div>
 
   )
@@ -78,23 +73,6 @@ export default App;
 
 
 
-
-{/* <Heading1 title={Item}/>
-<Heading1 title={"ingredients to cook the " + Item}/>
-<CustomList list={Ingredients}/>
-<Heading1 title={"Required  Steps to Cook The  " + Item}/>
-<CustomList list={Instructions}/>
-<Heading1 title={"Fruits"}/>
-
-   <CustomList list={["apple","banana"]} />
-
-<Heading1 title={"Students"}/>
-
-    <CustomList list={students}/>
-
-<Heading1 title={"Vegetables"}/>
-
-      <CustomList list={vegetables}/> */}
 
 
 
