@@ -5,6 +5,7 @@ export default class FetchExample extends Component {
     products: [],
     loader: true,
     error: false,
+    
   };
 
   fetchProducts = () => {
