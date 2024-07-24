@@ -52,6 +52,7 @@ import UserList1 from "./components/jsonapi";
 import UseStateExample from "./components/Hooks/useStateexmp";
 import UseStateExample2 from "./components/Hooks/useStateexmp2";
 import TodoExample from "./components/Hooks/todouseStateexmp";
+import ShowGreeting from "./components/Hooks/useStateexmp3";
 
 
 
@@ -60,7 +61,7 @@ const App=()=>{
   return(
   <div>
 
-<TodoExample/>
+<ShowGreeting/>
 
     </div>
 
