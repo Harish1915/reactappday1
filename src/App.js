@@ -49,6 +49,9 @@ import UpdatingComponent from "./components/class-components/updating/updating";
 import UnMounting from "./components/class-components/unmounting/unmounting";
 import UserList from "./components/jsonapi";
 import UserList1 from "./components/jsonapi";
+import UseStateExample from "./components/Hooks/useStateexmp";
+import UseStateExample2 from "./components/Hooks/useStateexmp2";
+import TodoExample from "./components/Hooks/todouseStateexmp";
 
 
 
@@ -57,7 +60,8 @@ const App=()=>{
   return(
   <div>
 
-<UserList1/>
+<TodoExample/>
+
     </div>
 
   )
