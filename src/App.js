@@ -53,6 +53,9 @@ import UseStateExample from "./components/Hooks/useStateexmp";
 import UseStateExample2 from "./components/Hooks/useStateexmp2";
 import TodoExample from "./components/Hooks/todouseStateexmp";
 import ShowGreeting from "./components/Hooks/useStateexmp3";
+import ShowFetch from "./components/Hooks/useEffect-Fetch";
+import ShowFetchCase2 from "./components/Hooks/useEffectcase2";
+import CountData from "./components/pratic";
 
 
 
@@ -61,7 +64,9 @@ const App=()=>{
   return(
   <div>
 
-<ShowGreeting/>
+{/* <ShowFetchCase2/> */}
+{/* <CountData/> */}
+<UseStateExample/>
 
     </div>
 
