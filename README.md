@@ -1,49 +1,44 @@
 
-what is State Management ?
-in APP single component change's called "local management" and 
-in APP we can do multiple state changes management is call "global management" this both are called "State ManageMent"
 
-useState:- 
+useEffect:-
+It's a hook functional components,
+which causes the side effects like 
+1. data fetching
+2. Dom manipulations
+3. Event listeners 
+4. timer events
+5. subscriptions
 
-useState is a react functional hook , which "creates" and "manages the state"(state is a mutable )
-using useState "local state management" is possible 
+useEffect is the replacement of following life cycle methods
+1. component did mount
+2. component did update
+3. component will unmount 
+this 3 do only [useEffect] 
 
-what is local state management?:- data management within the component 
-global state management :- data management within the application
+useEffect syntax: it will accept 2 args
+1. call back function
+2. Array (Dependency array)
+note :  Based on the Dependency array, UseEffect behavior will changes
 
+syntax: useEffect(()=>{},[]) 
 
-useState syntax:- 
+case1: when dependency array length is Zero
+useEffect will behave like a component did mount method 
 
-1. useState will accept one  argument (initial state)
+case 2 : when dependency array having some length ["variable1","variable2".....]
+useEffect will behave like a Component did update whenever dependency variable changes
 
-useState(0 or false...)
-note: initial state can be any "data type"
+case 3 :- NO dependency Array UseEffect(()=>{})
+in this case useEffect will continuously  executes whenever state or prop changes (it goes to infinite loop)
 
-2. useState will return array (array contains 2 elements)
-2.1 current state
-2.2 update Function
+Tasks:
+1. Repeat the class
+2. Display list of recipes on the  page load, using useEffect hook
+3. show recipes in the table (bootstrap)
+4. based on the season show the season name and corresponding image of season
+5. Research on weather Api and show weather in Ui ,based on the weather control the background image
 
-const array = useState(false)
-
-const [currentState, updateFunction]=useState(false)
-
-note: const represents immutability of state  directly 
-
-we can change the current state using updaterFunction
-
-useState is the replacement of:
-1. constructor state creation
-2. setState for managing
-
-updaterFunction: it will accept the function and returns updated current state
-
-Exercise:-
-1. Great the user based on the time on the button
-
-steps:
-
-1. Take a button which shows greet user
-2. Initialize the state will empty strings("") := const [greeting,setGreeting]=useState("")
-3. Take A js function in which it returns the string (morning ,afternoon ...) based on the current time
-4. On BUTTON Click tigers the js function ands set the  string to the local state (useState)
-5. Bind the greetings in the UI, whenever state changes greetings will be changed
+Topics:
+1. UseState examples
+2. useEffect introduction
+3. examples 

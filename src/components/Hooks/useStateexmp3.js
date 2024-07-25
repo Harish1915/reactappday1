@@ -1,19 +1,24 @@
-import { useState } from "react"
+import { useEffect, useState } from "react";
 import { greetingFn } from "../../jsFunctions/refresh";
 
+const ShowGreeting = () => {
+  const [greeting, setGreeting] = useState("");
+  useEffect(() => {
+    console.log("useeffect");
+    // document.title = "hi";
+    greetingHandler();
+  }, []);
+  const greetingHandler = () => {
+    const greetingString = greetingFn();
 
-const ShowGreeting=()=>{
-    const[greeting,setGreeting]=useState("");
-   const greetingHandler=()=>{
-        const greetingString=greetingFn();
-        console.log(greetingString);
-        setGreeting(greetingString)
-    };
-    return(
-        <>
-        <h1>Time TO  {greeting}</h1>
-        <button onClick={greetingHandler}>click me</button>
-        </>
-    )
+    setGreeting(greetingString);
+  };
+  
+  return (
+    <>
+      <h1>Time TO {greeting}</h1>
+      {/* <button onClick={greetingHandler}>click me</button> */}
+    </>
+  );
 };
 export default ShowGreeting;
