@@ -56,6 +56,10 @@ import ShowGreeting from "./components/Hooks/useStateexmp3";
 import ShowFetch from "./components/Hooks/useEffect-Fetch";
 import ShowFetchCase2 from "./components/Hooks/useEffectcase2";
 import CountData from "./components/pratic";
+import UseEffectEx1 from "./components/Hooks/useEffect/useEffectex1";
+import UncontrolledForm from "./components/Forms/uncontrolled/uncontrolform";
+import UncontrolledFormAPi from "./components/Forms/uncontrolled/uncontrollfrmApi";
+import AppleForm from "./components/Forms/uncontrolled/samsong";
 
 
 
@@ -63,11 +67,10 @@ import CountData from "./components/pratic";
 const App=()=>{
   return(
   <div>
-
-{/* <ShowFetchCase2/> */}
-{/* <CountData/> */}
-<UseStateExample/>
-
+{/* <UseEffectEx1/> */}
+{/* <UncontrolledForm/> */}
+<UncontrolledFormAPi/>
+{/* <AppleForm/> */}
     </div>
 
   )
