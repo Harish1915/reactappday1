@@ -2,6 +2,7 @@ import { useState } from "react";
 import ConditionalRendering from "../../../conditionalrender/condition";
 import ImageComp from "../../../image/imagecmp";
 import SpinnEr from "../../../bootstrap/spinner/spinner";
+import "./Regformtable.css";
 
 function RegistrationForm() {
   const [username, setUserName] = useState("");
@@ -11,7 +12,7 @@ function RegistrationForm() {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [userData, setUserData] = useState({});
-  const[list,setList]=useState([]);
+  const [list, setList] = useState([]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -39,19 +40,25 @@ function RegistrationForm() {
         alert(finalResponse.message);
       } else {
         console.log(finalResponse, "finalResponse");
-        const totalData={firstName:finalResponse.firstName,lastName:finalResponse.lastName,email:finalResponse.email};
-setUserName("");
-setEMail("");
-setPassword("");
+        // setUserData(finalResponse);// after submit another page data
+        const totalData = {
+          firstName: finalResponse.firstName,
+          lastName: finalResponse.lastName,
+          email: finalResponse.email,
+        };
+        setUserName("");
+        setEMail("");
+        setPassword("");
         // console.log(list);
-        const userExists=list.includes(totalData);
-        if(userExists){
+        const userExists = list.some(user=>user.email===totalData.email);
+        if (userExists) {
           alert("user already exists");
-        }else{
-          setList([...list,totalData]);
+        } else {
+          setList([...list, totalData]);
+          // setUserData(finalResponse);// after submit showing data
         }
-       
-        // setUserData(finalResponse);// after submit showing data
+
+        
       }
     } catch (error) {}
   };
@@ -95,21 +102,22 @@ setPassword("");
     return value.length > 30;
   };
 
-  const deleteHandler=(index)=>{
-    setList(list.filter((_,i)=>i!==index));
+  const deleteHandler = (index) => {
+    setList(list.filter((_, i) => i !== index));
   };
 
   return (
     <>
       {Object.keys(userData).length > 0 ? (
-        <h1> Hi {userData.firstName}  {userData.lastName} <br/> <SpinnEr/>Your  Email ID:- <SpinnEr/>{userData.email} 
-        
-        
-            </h1>
-       
+        <h1>
+          {" "}
+          Hi {userData.firstName} {userData.lastName} <br /> <SpinnEr />
+          Your Email ID:- <SpinnEr />
+          {userData.email}
+        </h1>
       ) : (
         <form onSubmit={submitHandler} style={{ maxWidth: 450 }}>
-          <h1>"User-Registration-Form"</h1>
+          <h1>"Registration-Form"</h1>
           <div className="mb-3 mt-3">
             <label htmlFor="UserName" className="form-label">
               UserName:
@@ -168,7 +176,7 @@ setPassword("");
               </span>
             )}
           </div>
-      
+
           <div className="form-check mb-3">
             <label className="form-check-label">
               <input
@@ -184,37 +192,39 @@ setPassword("");
           </button>
         </form>
       )}
-<h1>User Data Table</h1>
-{
-  list.length>0?
-  <>
-  <table>
-    <thead>
-        <tr>
-            <td>#Id</td>
-            <td>Name</td>
-            <td>Email -Id</td>
-            <td>Dlt-Option</td>
-       </tr>
-    </thead>
+      {/* <h1>User Data Table</h1> */}
+      {list.length > 0 ? (
+        <>
+          <table className="table">
+            <thead className="table thead">
+              <tr>
+                <td>#Id</td>
+                <td>First-Name</td>
+                <td>lastName</td>
+                <td>Email-ID</td>
+                <td>D-Option</td>
+              </tr>
+            </thead>
 
-    <tbody>
-        { list.map((each,index)=>{
-       return(
-        <tr>
-        <td>{index+1}</td>
-        <td>{each.firstName}</td>
-        <td>{each.lastName}</td>
-        <td>{each.email}</td>
-        {console.log(list)}
-<button onClick={()=>deleteHandler(index)}>DELETE</button>
-       </tr>
-       )
-        })}
-    </tbody>
-</table>
-  </>:<h1></h1>
-}
+            <tbody>
+              {list.map((each, index) => {
+                return (
+                  <tr key={each.id}>
+                    <td>{index + 1}</td>
+                    <td>{each.firstName}</td>
+                    <td>{each.lastName}</td>
+                    <td>{each.email}</td>
+                    {console.log(list)}
+                    <button onClick={() => deleteHandler(index)}>DELETE</button>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </>
+      ) : (
+        <h1></h1>
+      )}
     </>
   );
 }
