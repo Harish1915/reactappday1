@@ -36,7 +36,7 @@ class RecipeList extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>HARISH</h1>
+        <h1>Recipes</h1>
         {this.state.loader ? (
           <h2>please wait</h2>
         ) : (

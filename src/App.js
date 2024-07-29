@@ -64,6 +64,7 @@ import ControlledForm from "./components/Forms/uncontrolled/controlled/controll-
 import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tableform";
 import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
 import NavigationStack from "./navigation/navigation";
+import MyApp from "./mini-app/Miniapp";
 
 
 
@@ -71,7 +72,8 @@ import NavigationStack from "./navigation/navigation";
 const App=()=>{
   return(
   <div>
-<NavigationStack/>
+{/* <NavigationStack/> */}
+<MyApp/>
     </div>
 
   )

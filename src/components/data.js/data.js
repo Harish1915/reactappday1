@@ -183,7 +183,9 @@ const CookIng = () => {
       {
       
       recipes.map((recipe) => (
+        
         <div key={recipe.id}   className="flex">
+        
           <img src={recipe.image} alt={recipe.name}  width={150} height={150}/>
           <h2>{recipe.name}</h2>
           <p>Cuisine: {recipe.cuisine}</p>
