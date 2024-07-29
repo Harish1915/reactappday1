@@ -1,19 +1,41 @@
 
 
-controlled components: Form controlled will done by react itself
+Navigation:-
 
-field validations were possible
+React is library which creates UI
+Data fetching , navigation's 
+React Router Dom : using react-router-dom we will enable navigation's in the react applications
 
-input states will be only handled react 
+npm i react-router-dom
+Navigation are of 2 ways 
+1. Static 
+2. Dynamic Navigation's
 
-Steps for Controlled components:
+1. HOme screen /
+2. About Screen/about
+3. setting screen/setting
+4. Blog screen / blog
 
-1. Take the Form (jsx)
 
-2. Take the states for the inputs using useState=>1) "[SingleState]"(passing object) 2) "[MultiStates]"[in login form "user name" n "password" is there  
-here we can take one state for user name  and second state for password  ]
 
-3. attach the states via value attribute to the input and also attach onChange handler for each input (field validations )
 
-4.  To collect the values  from handlers , we will use "[event.target.value]"
- 5. For field validations we can do in the handlers
+
+
+https://www.zomato.com-> basic url
+/hyderabad -> dynamic url
+/mindspace-social-hitech-city/->dynamic URL
+
+https://www.zomato.com-> base URL
+/investor-relations-> static url
+
+Topics:
+1. Navigation's in react using  react-route-dom
+2. Link component and NavLink for   re-directions
+3. static routing
+4. Dynamic Routing introduction
+5. No page Routing
+
+Tasks:-
+1. Repeat the class
+2. main screen, menu screen , locations,login,registration
+3. Load the content in the path(home , about ...)

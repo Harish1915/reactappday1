@@ -63,6 +63,7 @@ import AppleForm from "./components/Forms/uncontrolled/samsong";
 import ControlledForm from "./components/Forms/uncontrolled/controlled/controll-form";
 import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tableform";
 import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
+import NavigationStack from "./navigation/navigation";
 
 
 
@@ -70,8 +71,7 @@ import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registr
 const App=()=>{
   return(
   <div>
-<RegistrationForm/>
-{/* <ControlledForm/> */}
+<NavigationStack/>
     </div>
 
   )
