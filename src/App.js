@@ -60,6 +60,9 @@ import UseEffectEx1 from "./components/Hooks/useEffect/useEffectex1";
 import UncontrolledForm from "./components/Forms/uncontrolled/uncontrolform";
 import UncontrolledFormAPi from "./components/Forms/uncontrolled/uncontrollfrmApi";
 import AppleForm from "./components/Forms/uncontrolled/samsong";
+import ControlledForm from "./components/Forms/uncontrolled/controlled/controll-form";
+import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tableform";
+import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
 
 
 
@@ -67,10 +70,8 @@ import AppleForm from "./components/Forms/uncontrolled/samsong";
 const App=()=>{
   return(
   <div>
-{/* <UseEffectEx1/> */}
-{/* <UncontrolledForm/> */}
-<UncontrolledFormAPi/>
-{/* <AppleForm/> */}
+<RegistrationForm/>
+{/* <ControlledForm/> */}
     </div>
 
   )
