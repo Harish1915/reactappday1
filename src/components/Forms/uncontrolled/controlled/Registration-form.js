@@ -2,6 +2,7 @@ import { useState } from "react";
 import ConditionalRendering from "../../../conditionalrender/condition";
 import ImageComp from "../../../image/imagecmp";
 import SpinnEr from "../../../bootstrap/spinner/spinner";
+import { Link } from "react-router-dom";
 
 function RegistrationForm() {
   const [username, setUserName] = useState("");
@@ -44,12 +45,19 @@ setUserName("");
 setEMail("");
 setPassword("");
         // console.log(list);
-        const userExists=list.includes(totalData);
-        if(userExists){
-          alert("user already exists");
-        }else{
-          setList([...list,totalData]);
-        }
+        // const userExists=list.includes(totalData); // find or filter tiskoni cheyali ekkada
+        // if(userExists){
+        //   alert("user already exists");
+        // }else{
+        //   setList([...list,totalData]);
+        // }
+        const userExists = list.find(item => item === totalData.email);
+
+if (userExists) {
+  alert("User already exists");
+} else {
+  setList([...list, totalData.email]);
+}
        
         // setUserData(finalResponse);// after submit showing data
       }
@@ -179,9 +187,12 @@ setPassword("");
               Checkbox
             </label>
           </div>
+          {/* here we close the only link tag after clicking the submit table displayed in below the submit button */}
+         <Link to="/*">
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
+          </Link>
         </form>
       )}
 <h1>User Data Table</h1>
