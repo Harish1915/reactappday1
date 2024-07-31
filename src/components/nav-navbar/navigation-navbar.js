@@ -23,6 +23,14 @@ const NavigationNavBar = () => {
             <NavLink to={"/setting"}  style={linkStyle}> Settings</NavLink>
 
           </li>
+          <li className="nav-item">
+            <NavLink to={"/recipes"}  style={linkStyle}> Recipes</NavLink>
+
+          </li>
+          <li className="nav-item">
+            <NavLink to={"/doctors"}  style={linkStyle}> Doctors</NavLink>
+
+          </li>
         </ul>
       </div>
     </nav>
