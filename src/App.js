@@ -64,15 +64,42 @@ import ControlledForm from "./components/Forms/uncontrolled/controlled/controll-
 import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tableform";
 import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
 import NavigationStack from "./navigation/navigation";
+import { createContext, useState } from "react";
 
 
 
+export const DataContext=createContext();
 
 const App=()=>{
+
+  const [username,setUserName]=useState("Prem");
+  const [darkMode,setDarkMode]=useState(true);
+  const[color,setColorMode]=useState(true)
+
+  const changeUsername=(newName)=>{
+    setUserName(newName)
+  }
+  const darkLightMode=()=>{
+    setDarkMode((setMode)=>!setMode)
+  }
+  const colorC=()=>{
+setColorMode((color)=>!color)
+  }
+
   return(
-  <div>
+  // <div>
+  <DataContext.Provider value={{
+    username,// key n value same so we can take single username
+    darkMode,
+    changeUsername,//function passing in obj it will change as a method 
+    darkLightMode,
+    color,
+    colorC
+  }}>
 <NavigationStack/>
-    </div>
+  </DataContext.Provider>
+
+    // </div>
 
   )
 };
