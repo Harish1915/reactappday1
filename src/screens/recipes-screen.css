@@ -33,4 +33,23 @@
     text-align: center;
     width: 100%;
   }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   
