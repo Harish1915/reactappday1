@@ -65,6 +65,11 @@ import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tablefor
 import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
 import NavigationStack from "./navigation/navigation";
 import { createContext, useState } from "react";
+import RecipeFind from "./components/Apicall's/recipesApi";
+import CountryFinder from "./components/Apicall's/countriesApi";
+import CountryFind from "./components/Apicall's/countriesApi";
+import DogFind from "./components/dogApi";
+import DictionaryApi from "./components/Apicall's/dictionaryApi";
 
 
 
@@ -74,7 +79,8 @@ const App=()=>{
 
   const [username,setUserName]=useState("Prem");
   const [darkMode,setDarkMode]=useState(true);
-  const[color,setColorMode]=useState(true)
+  const[color,setColorMode]=useState(true);
+  const[counter,setCounter]=useState(10)
 
   const changeUsername=(newName)=>{
     setUserName(newName)
@@ -85,21 +91,32 @@ const App=()=>{
   const colorC=()=>{
 setColorMode((color)=>!color)
   }
-
+const changeCount=(value)=>{
+  setCounter(counter+value);
+}
   return(
+
+    <DictionaryApi/>
+
+    // <CountryFind/>
+    // <DogFind/>
   // <div>
-  <DataContext.Provider value={{
-    username,// key n value same so we can take single username
-    darkMode,
-    changeUsername,//function passing in obj it will change as a method 
-    darkLightMode,
-    color,
-    colorC
-  }}>
-<NavigationStack/>
-  </DataContext.Provider>
+//   <DataContext.Provider value={{
+//     username,// key n value same so we can take single username
+//     darkMode,
+//     changeUsername,//function passing in obj it will change as a method 
+//     darkLightMode,
+//     color,
+//     colorC,
+//     counter,
+//     changeCount,
+
+//   }}>
+// {/* <NavigationStack/> */}
+//   </DataContext.Provider>
 
     // </div>
+// {/* <RecipeFind/> */}
 
   )
 };

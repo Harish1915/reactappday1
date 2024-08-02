@@ -53,8 +53,7 @@ const RecipesScreen = () => {
         <button id="search-button" onClick={handleSearch}>
           Search
         </button>
-        <br />
-        <br />
+        
       </div>
 
       <div className="recipes-container">

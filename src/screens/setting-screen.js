@@ -4,7 +4,7 @@ import { DataContext } from "../App";
 import "./style.css";
 
 const SettingScreen = () => {
-  const { username, darkMode, changeUsername, darkLightMode, color, colorC } =
+  const { username, darkMode, changeUsername, darkLightMode, color, colorC,changeCount,counter } =
     useContext(DataContext);
   const nameChange = () => {
     changeUsername("Hari");
@@ -15,6 +15,9 @@ const SettingScreen = () => {
   const colorHand = () => {
     colorC();
   };
+  const countHandler=()=>{
+    changeCount(1)
+  }
   return (
     <>
       <NavigationNavBar />
@@ -25,15 +28,17 @@ const SettingScreen = () => {
         </h1>
         <button onClick={nameChange}> click to change use name</button>
 
-        <div class="search-container">
+        {/* <div class="search-container">
           <input type="text" id="search-input" placeholder="Search..."></input>
           <button id="search-button">Search</button>
           <br></br>
           <br></br>
-        </div>
+        </div> */}
         <button onClick={ChangeMode}>click to change bg</button>
         <h1 className={color ? "text-color" : "bg-color"}>hi </h1>
         <button onClick={colorHand}>click to change bg</button>
+        <button onClick={countHandler}>click to count {counter}</button>
+
       </div>
     </>
   );

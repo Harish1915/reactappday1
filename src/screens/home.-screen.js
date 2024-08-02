@@ -5,7 +5,7 @@ import "./style.css";
 
 const HomeScreen = () => {
   // const globalData =useContext(DataContext);
-  const { username, darkLightMode, darkMode, color} =
+  const { username, darkLightMode, darkMode, color,counter} =
     useContext(DataContext); // D-structuring
 
   console.log(username, "username.....");
@@ -22,10 +22,12 @@ const HomeScreen = () => {
 
         <h1 className={color ? "text-color" : "bg-color"}>
           {" "}
-          Well Come to My Screen {username}
+          Well Come to My Screen {username} Your Age is {counter}
         </h1>
         {/* <button onClick={colorChange}>click to change</button> */}
       </div>
+
+      
     </>
   );
 };
