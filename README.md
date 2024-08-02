@@ -9,3 +9,4 @@ step's
 [id:1,name"recipes names"]
 3. <option value={eachRecipe.name}>{eachRecipe.name}</option>
 4. after selecting extract the values using event .target.value
+..
