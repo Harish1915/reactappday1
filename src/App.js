@@ -71,7 +71,7 @@ import CountryFind from "./components/Apicall's/countriesApi";
 import DogFind from "./components/dogApi";
 import UseReducer from "./components/useReducer/useReducer";
 import TodoReducer from "./components/useReducer/TodoReducer";
-import xCounter from "./components/useReducer/sample";
+
 import XCounter from "./components/useReducer/contextnreducer";
 
 
