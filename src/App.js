@@ -64,43 +64,89 @@ import ControlledForm from "./components/Forms/uncontrolled/controlled/controll-
 import ControlledForm1 from "./components/Forms/uncontrolled/controlled/tableform";
 import RegistrationForm from "./components/Forms/uncontrolled/controlled/Registration-form";
 import NavigationStack from "./navigation/navigation";
-import { createContext, useState } from "react";
+import { createContext, useReducer, useState } from "react";
 import RecipeFind from "./components/Apicall's/recipesApi";
 import CountryFinder from "./components/Apicall's/countriesApi";
 import CountryFind from "./components/Apicall's/countriesApi";
 import DogFind from "./components/dogApi";
-import DictionaryApi from "./components/Apicall's/dictionaryApi";
+import UseReducer from "./components/useReducer/useReducer";
+import TodoReducer from "./components/useReducer/TodoReducer";
+import xCounter from "./components/useReducer/sample";
+import XCounter from "./components/useReducer/contextnreducer";
+
 
 
 
 export const DataContext=createContext();
+export const CounterContext=createContext();
 
 const App=()=>{
 
-  const [username,setUserName]=useState("Prem");
-  const [darkMode,setDarkMode]=useState(true);
-  const[color,setColorMode]=useState(true);
-  const[counter,setCounter]=useState(10)
+//   const [username,setUserName]=useState("Prem");
+//   const [darkMode,setDarkMode]=useState(true);
+//   const[color,setColorMode]=useState(true);
+//   const[counter,setCounter]=useState(10)
 
-  const changeUsername=(newName)=>{
-    setUserName(newName)
+//   const changeUsername=(newName)=>{
+//     setUserName(newName)
+//   }
+//   const darkLightMode=()=>{
+//     setDarkMode((setMode)=>!setMode)
+//   }
+//   const colorC=()=>{
+// setColorMode((color)=>!color)
+//   }
+// const changeCount=(value)=>{
+//   setCounter(counter+value);
+// }
+
+
+const initialState = {count: 0};
+
+const actionTypes = {
+  INCREMENT: "INCREMENT",
+  DECREMENT: "DECREMENT",
+  RESET: "RESET",
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case actionTypes.INCREMENT:
+      return { ...state, count: state.count + 1 };
+    case actionTypes.DECREMENT:
+      return { ...state, count: state.count - 1 };
+    case actionTypes.RESET:
+      return { ...state, count: initialState.count };
+    default:
+      return state;
   }
-  const darkLightMode=()=>{
-    setDarkMode((setMode)=>!setMode)
-  }
-  const colorC=()=>{
-setColorMode((color)=>!color)
-  }
-const changeCount=(value)=>{
-  setCounter(counter+value);
-}
+};
+
+const [state,dispatchFunction]=useReducer(reducer,initialState);
+
   return(
 
-    <DictionaryApi/>
+
+<div>
+<CounterContext.Provider value={{
+  state,
+  dispatchFunction
+}}>
+<XCounter/>
+</CounterContext.Provider>
+</div>
+
+
+
+
+
+
+
+
 
     // <CountryFind/>
     // <DogFind/>
-  // <div>
+//   <div>
 //   <DataContext.Provider value={{
 //     username,// key n value same so we can take single username
 //     darkMode,
@@ -112,11 +158,15 @@ const changeCount=(value)=>{
 //     changeCount,
 
 //   }}>
-// {/* <NavigationStack/> */}
+// <NavigationStack/>
 //   </DataContext.Provider>
 
-    // </div>
+
+//     </div>
 // {/* <RecipeFind/> */}
+
+// {/* <TodoReducer/> */}
+
 
   )
 };

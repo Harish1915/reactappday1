@@ -1,0 +1,33 @@
+.inc-card{
+    height: 200px;
+    width: 450px;
+    border: 2px solid red;
+    padding: 20px;
+    background-color: blanchedalmond;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin:   200px 0px 0px 500px  ;
+    box-shadow: 2px 3px 2px 1px rgb(0, 0, 34, 0.3) inset;
+    
+}
+.btn1{
+    color: rgb(17, 227, 238);
+    background-color: #3e4810;
+    margin: 5px;
+}
+.btn2{
+    color: rgb(142, 17, 238);
+    background-color: #eeeb11;
+    margin: 5px;
+}
+.btn3{
+    color: rgb(5, 5, 5);
+    background-color: #e21111;
+    margin: 5px;
+}
+.text{
+    text-shadow: 0 13.36px 8.896px #c3b4b2, 0 -2px 1px #000000;
+    letter-spacing: -4px;
+    color: #1324da;
+}

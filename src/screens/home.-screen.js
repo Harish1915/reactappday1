@@ -5,7 +5,7 @@ import "./style.css";
 
 const HomeScreen = () => {
   // const globalData =useContext(DataContext);
-  const { username, darkLightMode, darkMode, color,counter} =
+  const { darkLightMode, darkMode, color, counter, username } =
     useContext(DataContext); // D-structuring
 
   console.log(username, "username.....");
@@ -18,7 +18,10 @@ const HomeScreen = () => {
     <>
       <div>
         <NavigationNavBar />
-        <h1 className={darkMode?"dark-mode":"light-mode"}> Well Come Home Screen</h1>
+        <h1 className={darkMode ? "dark-mode" : "light-mode"}>
+          {" "}
+          Well Come Home Screen
+        </h1>
 
         <h1 className={color ? "text-color" : "bg-color"}>
           {" "}
@@ -26,8 +29,6 @@ const HomeScreen = () => {
         </h1>
         {/* <button onClick={colorChange}>click to change</button> */}
       </div>
-
-      
     </>
   );
 };
