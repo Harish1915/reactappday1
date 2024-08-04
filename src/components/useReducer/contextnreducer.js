@@ -1,14 +1,15 @@
-import { useContext } from "react";
-import { CounterContext } from "../../App";
+import { CounterContext,useContext } from "react";
+// import { CounterContext } from "../../App";
 
 
-const{state,dispatchFunction}=useContext(CounterContext);
+
 
 
 function XCounter(){
+    const{state,dispatchFunction}=useContext(CounterContext);
     const incHandler=()=>{
        dispatchFunction({
-        type:actionTypes.INCREMENT
+        // type:actionTypes.INCREMENT
        })
     }
     return(

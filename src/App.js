@@ -78,91 +78,50 @@ import XCounter from "./components/useReducer/contextnreducer";
 
 
 export const DataContext=createContext();
-export const CounterContext=createContext();
+// export const CounterContext=createContext();
 
 const App=()=>{
 
-//   const [username,setUserName]=useState("Prem");
-//   const [darkMode,setDarkMode]=useState(true);
-//   const[color,setColorMode]=useState(true);
-//   const[counter,setCounter]=useState(10)
+  const [username,setUserName]=useState("Prem");
+  const [darkMode,setDarkMode]=useState(true);
+  const[color,setColorMode]=useState(true);
+  const[counter,setCounter]=useState(10)
 
-//   const changeUsername=(newName)=>{
-//     setUserName(newName)
-//   }
-//   const darkLightMode=()=>{
-//     setDarkMode((setMode)=>!setMode)
-//   }
-//   const colorC=()=>{
-// setColorMode((color)=>!color)
-//   }
-// const changeCount=(value)=>{
-//   setCounter(counter+value);
-// }
-
-
-const initialState = {count: 0};
-
-const actionTypes = {
-  INCREMENT: "INCREMENT",
-  DECREMENT: "DECREMENT",
-  RESET: "RESET",
-};
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case actionTypes.INCREMENT:
-      return { ...state, count: state.count + 1 };
-    case actionTypes.DECREMENT:
-      return { ...state, count: state.count - 1 };
-    case actionTypes.RESET:
-      return { ...state, count: initialState.count };
-    default:
-      return state;
+  const changeUsername=(newName)=>{
+    setUserName(newName)
   }
-};
+  const darkLightMode=()=>{
+    setDarkMode((setMode)=>!setMode)
+  }
+  const colorC=()=>{
+setColorMode((color)=>!color)
+  }
+const changeCount=(value)=>{
+  setCounter(counter+value);
+}
 
-const [state,dispatchFunction]=useReducer(reducer,initialState);
+
 
   return(
-
-
-<div>
-<CounterContext.Provider value={{
-  state,
-  dispatchFunction
-}}>
-<XCounter/>
-</CounterContext.Provider>
-</div>
-
-
-
-
-
-
-
-
-
-    // <CountryFind/>
+// <CountryFind/>
     // <DogFind/>
-//   <div>
-//   <DataContext.Provider value={{
-//     username,// key n value same so we can take single username
-//     darkMode,
-//     changeUsername,//function passing in obj it will change as a method 
-//     darkLightMode,
-//     color,
-//     colorC,
-//     counter,
-//     changeCount,
+  <div>
+  <DataContext.Provider value={{
+    username,// key n value same so we can take single username
+    darkMode,
+    changeUsername,//function passing in obj it will change as a method 
+    darkLightMode,
+    color,
+    colorC,
+    counter,
+    changeCount,
 
-//   }}>
-// <NavigationStack/>
-//   </DataContext.Provider>
+  }}>
+<NavigationStack/>
+  </DataContext.Provider>
 
 
-//     </div>
+    </div>
 // {/* <RecipeFind/> */}
 
 // {/* <TodoReducer/> */}
