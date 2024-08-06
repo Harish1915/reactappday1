@@ -73,6 +73,7 @@ import UseReducer from "./components/useReducer/useReducer";
 import TodoReducer from "./components/useReducer/TodoReducer";
 
 import XCounter from "./components/useReducer/contextnreducer";
+import WeatherAPP from "./components/Weatherapp/weather-lanlat";
 
 
 
@@ -105,28 +106,28 @@ const changeCount=(value)=>{
   return(
 // <CountryFind/>
     // <DogFind/>
-  <div>
-  <DataContext.Provider value={{
-    username,// key n value same so we can take single username
-    darkMode,
-    changeUsername,//function passing in obj it will change as a method 
-    darkLightMode,
-    color,
-    colorC,
-    counter,
-    changeCount,
+//   <div>
+//   <DataContext.Provider value={{
+//     username,// key n value same so we can take single username
+//     darkMode,
+//     changeUsername,//function passing in obj it will change as a method 
+//     darkLightMode,
+//     color,
+//     colorC,
+//     counter,
+//     changeCount,
 
-  }}>
-<NavigationStack/>
-  </DataContext.Provider>
+//   }}>
+// <NavigationStack/>
+//   </DataContext.Provider>
 
 
-    </div>
+//     </div>
 // {/* <RecipeFind/> */}
 
 // {/* <TodoReducer/> */}
 
-
+<WeatherAPP/>
   )
 };
 export default App;  
