@@ -106,28 +106,33 @@ const changeCount=(value)=>{
   return(
 // <CountryFind/>
     // <DogFind/>
-//   <div>
-//   <DataContext.Provider value={{
-//     username,// key n value same so we can take single username
-//     darkMode,
-//     changeUsername,//function passing in obj it will change as a method 
-//     darkLightMode,
-//     color,
-//     colorC,
-//     counter,
-//     changeCount,
-
-//   }}>
-// <NavigationStack/>
-//   </DataContext.Provider>
+  <div>
+  <DataContext.Provider value={{
+    username,// key n value same so we can take single username
+    darkMode,
+    changeUsername,//function passing in obj it will change as a method 
+    darkLightMode,
+    color,
+    colorC,
+    counter,
+    changeCount,
+    
 
 
-//     </div>
-// {/* <RecipeFind/> */}
+  }}>
+<NavigationStack/>
+<RecipeFind/> 
+  </DataContext.Provider>
+
+
+    </div>
+
 
 // {/* <TodoReducer/> */}
 
-<WeatherAPP/>
+ 
+// {/* <WeatherAPP/>   */}
+
   )
 };
 export default App;  

@@ -1,68 +1,63 @@
 
 
+Memorization--in React:-
 
-useReducer hook in react:
+Memorization in a optimization technique in react with out re-calculating expensive calculations of the functions by catching the results when ever same inputs provided 
 
-useReducer which is used for the state management in functional components, create and manage state
-
-useReducer alone can be only used for local state management
-
-if we use UseReducer with useContext we can achieve global complex state management 
-
-only one difference for use staten use-reducer
-{useReducer is used to apply complex logics for our complex states}
+3 ways in react for Memorization:
+1. React.memo() : Here props n state memorized
 
 
-useReducer syntax:
+pure component in functional component (without re-rendering the child whenever same props or state being loaded)
 
-it's accepting 2 arguments 
+React.memo is HOC:-
+HOC:- Higher-order-component : This is the pattern where a function can take the component as argument and return the enhanced component , this pattern makes re-use the functional logics
 
-1. reducer function 
-2. initial state(complex state)
+common functionality can be designed as a HOC , This can b called in multiple components without writing functional logics multiple times
 
-useReducer(()=>{},{}) 
+[* React.memo is different and Use memo is different ] both are used for memorization only 
+react.memo is stop there re rendering child component only parent can re render 
+ 
+2. useMemo(); Local state value ni memorize (we are using value memorize purpose )
 
-useReducer will return an array contains 2 elements
-1. current state
-2. dispatch function
+it's hook in functional components which memorizes the result returned by the function when same inputs were given 
 
-const state={
-    totalTickets:100,
-    bookedTickets:20,
-    currentAvailableTickets:80
-}
+useMemo syntax: it will accept 2 args
+1. callback function
+2. dependency array
 
-Technical term:
-
-1. action : action tells what to happen to the state or data 
-action is a object which tells what to happen to the state or data
-ex:- INCREMENT SALARY ,DECREMENT-SALARY , BOOK-TICKET,CANCEL-TICKET,HOLD-TICKET
-
-
-ex: BOOK-TICKETS(it's a action),no of tickets:6
-const ticketAction={
-    type:BOOK-TICKETS,
-    payload:6
-}
-const ticketAction={
-    type:CHANGE_NAME,
-    payload:"Kalki"
-}
-
-
-2. reducer-function:  is a pure function,this function will accept state and action as a parameter, based on the actions corresponding state change will be done 
-
-return{...state,bookedTickets:state.bookedTickets+ticketAction.payload}
-
-{
-    totalTickets:100,
-    bookedTickets:26,
-    currentAvailableTickets:74
-}
-
-3. dispatch function : This function dispatches the action performed by the user,
-dispatch function will accept the action {}
+const totalAmount=useMemo(()=>{
+    return qtyRasagulla*100 + qtyDrink*100
+},[qtyOfRasagulla,qtyOfDrink])
 
 
 
-(with out any interface of side effects  will just perform the what ever input given to the functions for always same input gives same out put it's called as 'Pure Function')
+
+3. useCallback():[function memorizes ki we are using]it's aHook in functional components which memorizes the function when same input's are given 
+
+
+useMemo syntax: it will accept 2 args
+1. callback function
+2. dependency array;-[if it's empty it will execute only one time and we can put one  state based on the state re-execution will happened when state is changed  ]
+useCallback
+
+useMemo(()=>{
+    SetCount(count=1)
+},[count])
+
+React 19 version  changes 
+
+
+Topics:
+1. Memorization in react
+2. HoC
+3. React.memo
+4. useMemo and useCallback introduction
+
+Tasks:
+1. Repeat the class
+2. Designed a hoc for counter
+3. 3 examples of Hoc
+4. 3 examples of react.memo , and were to use were not to use
+5. react compiler changes in react(19)
+6. complete recipe makes end to end
