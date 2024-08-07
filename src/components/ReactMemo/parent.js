@@ -8,6 +8,8 @@ function ToggleFunction() {
     
     const themHandler=()=>{
         setDarkThem(!darkTheme);
+
+        
     }
   return (
     <div>
