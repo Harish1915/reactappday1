@@ -116,6 +116,8 @@ const changeCount=(value)=>{
     colorC,
     counter,
     changeCount,
+    
+
 
   }}>
 <NavigationStack/>
