@@ -48,11 +48,11 @@ const RecipesScreen = () => {
           id="search-input"
           placeholder="Search..."
           value={searchItem}
-          onChange={(e) => setSearchItem(e.target.value)}
+          onChange={(e) => setSearchItem(e.target.value) }
+          onClick={handleSearch}
         />
-        <button id="search-button" onClick={handleSearch}>
-          Search
-        </button>
+        {/* <button id="search-button" onClick={handleSearch}>
+        </button> */}
         
       </div>
 
@@ -62,8 +62,8 @@ const RecipesScreen = () => {
           const { name, rating, image, id, cuisine } = eachRecipe;
           return (
             <div key={id} className="recipe-card">
-              <h5>Id: {id}</h5>
-              <h1>Name: {name}</h1>
+              {/* <h5>Id: {id}</h5> */}
+              <h1> {name}</h1>
               <img src={image} alt={name} width={150} height={150} />
               <h4>Rating: {rating}</h4>
               <Link to={`/recipes/${cuisine}/${id}`} className="see-more-link">

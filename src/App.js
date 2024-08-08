@@ -120,8 +120,8 @@ const changeCount=(value)=>{
 
 
   }}>
-<NavigatioclsnStack/>
-<RecipeFind/> 
+<NavigationStack/>
+{/* <RecipeFind/>  */}
   </DataContext.Provider>
 
 
