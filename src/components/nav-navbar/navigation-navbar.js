@@ -38,6 +38,10 @@ const NavigationNavBar = () => {
             <NavLink to={"/doctors"}  style={linkStyle}> Doctors</NavLink>
 
           </li>
+          <li className="nav-item">
+            <NavLink to={"/TestTab"}  style={linkStyle}> Test</NavLink>
+
+          </li>
           
         </ul>
       </div>

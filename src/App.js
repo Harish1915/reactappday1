@@ -116,12 +116,12 @@ const changeCount=(value)=>{
     colorC,
     counter,
     changeCount,
-    
+
 
 
   }}>
 <NavigationStack/>
-<RecipeFind/> 
+{/* <RecipeFind/>  */}
   </DataContext.Provider>
 
 

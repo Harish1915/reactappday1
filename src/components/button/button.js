@@ -24,20 +24,23 @@ import "./button.css"
 // export default CustomButton;
 
 export const CustomButton= (prop)=>{
+    console.log("custom button...",prop.text);
+    
 
-    const{source,text,text1,text2 ,bg,color}=prop
+    const{text,onPress}=prop
     return(
 
-        <center>
-        <div className="div" style={ {backgroundColor:bg}} > 
-            <h1> {text}</h1>
-            <img src={source}/>
-           <b> <p style={{color:"blue"}}>{text1} </p></b>
-            <button className="button" style={{backgroundColor:color}}> {text2}</button>
+        // <center>
+        // <div className="div" style={ {backgroundColor:bg}} > 
+        //     <h1> {text}</h1>
+        //     <img src={source}/>
+        //    <b> <p style={{color:"blue"}}>{text1} </p></b>
+        //     <button className="button" style={{backgroundColor:color}}> {text2}</button>
            
 
-        </div>
-        </center>
+        // </div>
+        // </center>
+        <button  style={{backgroundColor:"greenyellow"}}onClick={onPress}>{text}</button>
     )
 };
 export default CustomButton;

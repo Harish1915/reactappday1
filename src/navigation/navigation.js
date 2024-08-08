@@ -11,6 +11,7 @@ import { createContext, useEffect, useState } from "react";
 import Favorite from "../screens/favprite-recipe-screen";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TestScreen from "../screens/test-screen";
 
 const { BrowserRouter, Routes, Route, Router } = require("react-router-dom");
 
@@ -95,6 +96,8 @@ const NavigationStack = () => {
           <Route path="*" element={<InvalidScreen />} />
           <Route path="recipes" element={<UserScreen />} />
           <Route path="favoriteRecipes" element={<Favorite />} />
+          <Route path="/TestTab" element={<TestScreen />} />
+
 
           {/* nested navigation */}
 
@@ -106,8 +109,7 @@ const NavigationStack = () => {
           {/* dynamic routes */}
           <Route
             path="recipes/:cuisine/:recipeId"
-            element={<RecipeDetail />}
-          ></Route>
+            element={<RecipeDetail />}> </Route>
           {/* <Route path="user/:admin" element={<AdminScreen/>}></Route> */}
         </Routes>
       </BrowserRouter>
