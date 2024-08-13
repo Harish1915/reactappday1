@@ -1,0 +1,65 @@
+/* rnavbar.css */
+.navbar {
+    padding: 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #f8f9fa;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Assign different background colors for each tab */
+  .navbar-nav .nav-item:nth-child(1) .nav-link {
+    background-color: #343a40; /* Dark */
+  }
+  .navbar-nav .nav-item:nth-child(2) .nav-link {
+    background-color: #007bff; /* Blue */
+  }
+  .navbar-nav .nav-item:nth-child(3) .nav-link {
+    background-color: #28a745; /* Green */
+  }
+  .navbar-nav .nav-item:nth-child(4) .nav-link {
+    background-color: #ffc107; /* Yellow */
+  }
+  .navbar-nav .nav-item:nth-child(5) .nav-link {
+    background-color: #dc3545; /* Red */
+  }
+  .navbar-nav .nav-item:nth-child(6) .nav-link {
+    background-color: #6c757d; /* Gray */
+  }
+  .navbar-nav .nav-item:nth-child(7) .nav-link {
+    background-color: #17a2b8; /* Teal */
+  }
+  
+  /* Hover effect for nav links */
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: #d92323;
+    color: #000000;
+  }
+  
+  .navbar-nav .nav-item .nav-link.active {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+  }
+  
+  .badge {
+    font-size: 0.9rem;
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -74,6 +74,7 @@ import TodoReducer from "./components/useReducer/TodoReducer";
 
 import XCounter from "./components/useReducer/contextnreducer";
 import WeatherAPP from "./components/Weatherapp/weather-lanlat";
+import RecipeStack from "./RecipeMaker/RecipeNav";
 
 
 
@@ -107,7 +108,7 @@ const changeCount=(value)=>{
 // <CountryFind/>
     // <DogFind/>
   <div>
-  <DataContext.Provider value={{
+  {/* <DataContext.Provider value={{
     username,// key n value same so we can take single username
     darkMode,
     changeUsername,//function passing in obj it will change as a method 
@@ -120,11 +121,11 @@ const changeCount=(value)=>{
 
 
   }}>
-<NavigationStack/>
+<NavigationStack/> */}
 {/* <RecipeFind/>  */}
-  </DataContext.Provider>
+  {/* </DataContext.Provider> */}
 
-
+ <RecipeStack/> 
     </div>
 
 
