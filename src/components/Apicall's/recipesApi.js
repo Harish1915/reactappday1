@@ -1,67 +1,79 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const RecipeFind = () => {
   const [recipes, setRecipes] = useState([]);
-  const[selectedRecipe,setSelectedRecipe]=useState({});
+  const [selectedRecipe, setSelectedRecipe] = useState({});
 
   useEffect(() => {
     fetchData();
   }, []);
+
   const fetchData = async () => {
     const { data } = await axios.get("https://dummyjson.com/recipes");
-    // setRecipes(data.recipes);
     const idNdata = data.recipes.map((eachRecipe) => {
       return { id: eachRecipe.id, recipeName: eachRecipe.name };
     });
-    // console.log(idNdata);
     setRecipes(idNdata);
-    console.log(data);
   };
 
   const selectHandler = (event) => {
-    const selectedRecipeId=event.target.value;
-fetchEachRecipe(selectedRecipeId)
-    // console.log(event.target.value);
+    const selectedRecipeId = event.target.value;
+    fetchEachRecipe(selectedRecipeId);
   };
-// here one more Api call
-const fetchEachRecipe=async(recipeId)=>{
-    const {data}=await axios.get(`https://dummyjson.com/recipes/${recipeId}`)
-setSelectedRecipe(data);
-    console.log(data);
-};
+
+  const fetchEachRecipe = async (recipeId) => {
+    const { data } = await axios.get(`https://dummyjson.com/recipes/${recipeId}`);
+    setSelectedRecipe(data);
+  };
+
+  const getBackgroundClass = (id) => {
+    const classes = [
+      "bg-primary",
+      "bg-secondary",
+      "bg-success",
+      "bg-danger",
+      "bg-warning",
+      "bg-info",
+      "bg-light",
+      "bg-dark"
+    ];
+    return classes[id % classes.length];
+  };
 
   return (
-    <div>
-      <h1>Select the Recipes</h1>
-      {/* usestate=recips has a empty ([])array we need to fill with data */}
-
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Select the Recipes</h1>
       {recipes.length > 0 && (
-        <select onChange={selectHandler}>
-              {/*iterate the options */}
-          {recipes.map((each) => (
-            <option value={each.id} key={each.id}>{each.recipeName}</option>
-            
-          ))}
-        </select>
+        <div className="d-flex justify-content-center mb-4">
+          <select onChange={selectHandler} className="form-select w-50">
+            {recipes.map((each) => (
+              <option value={each.id} key={each.id}>
+                {each.recipeName}
+              </option>
+            ))}
+          </select>
+        </div>
       )}
 
-{
-    Object.keys(selectedRecipe).length>0 && 
-    <div>
-<h1>{selectedRecipe.name}</h1>
-<img src={selectedRecipe.image} width={150} height={150}/>
-{/* <h1>{selectedRecipe.ingredients}</h1> */}
-
-    </div>
-}
-     
-    
-
-     
+      {Object.keys(selectedRecipe).length > 0 && (
+        <div className="row justify-content-center">
+          <div className={`card text-center text-white ${getBackgroundClass(selectedRecipe.id)}`} style={{ width: "18rem" }}>
+            <img
+              src={selectedRecipe.image}
+              className="card-img-top"
+              alt={selectedRecipe.name}
+              style={{ width: "100%", height: "auto" }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{selectedRecipe.name}</h5>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
+
 export default RecipeFind;
-
-
